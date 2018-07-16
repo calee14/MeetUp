@@ -141,6 +141,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="x0E-b8-PXg"/>
                     <connections>
+                        <outlet property="eventTime" destination="39r-vj-s8U" id="SVJ-Ti-6lv"/>
                         <outlet property="picker" destination="zUz-ZM-2ia" id="EZa-Tl-nl4"/>
                     </connections>
                 </viewController>

@@ -43,13 +43,18 @@ class SetUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
+    
+    @IBOutlet weak var eventTime: UIPickerView!
+    var eventPickerData: [String] = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.picker.delegate = self
         self.picker.dataSource = self
         pickerData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-        
+        eventPickerData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     }
+    
 }
 
 
