@@ -22,6 +22,28 @@ class SetupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func unwindFromCalendar(_ segue: UIStoryboardSegue) {
+        print ("unwind from calendar")//changeForCal
+        let initialViewController = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
+    }
+    
+    @IBAction func unwindWithSaved(_ segue: UIStoryboardSegue) {
+        print("unwind with saved data")//changeForCal
+        let initialViewController = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
+    }
+    
+    @IBAction func unwindFromResult(_ segue: UIStoryboardSegue) {
+        print("unwind from result")//changeForCal
+        let initialViewController = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
+        self.view.window?.rootViewController = initialViewController
+        let backToNew = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
+        self.view.window?.rootViewController = backToNew
+        self.view.window?.makeKeyAndVisible()
+    }
 
 }
 
