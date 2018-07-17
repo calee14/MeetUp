@@ -13,7 +13,8 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var amTableView: UITableView!
     @IBOutlet weak var pmTableView: UITableView!
     
-    var selectedCells: [Int] = [Int]()
+    var AMSelectedCells: [Int] = [Int]()
+    var PMSelectedCells: [Int] = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +40,15 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         if tableView == amTableView {
             print("amtable")
             cell = tableView.dequeueReusableCell(withIdentifier: "AMCalendarCell", for: indexPath) as! CalendarTableViewCell
+            if AMSelectedCells.contains(indexPath.row) {
+                cell.backgroundColor = .green
+            }
         } else if tableView == pmTableView {
             print("pmtable")
             cell = tableView.dequeueReusableCell(withIdentifier: "PMCalendarCell", for: indexPath) as! CalendarTableViewCell
-        }
-        if selectedCells.contains(indexPath.row) {
-            cell.backgroundColor = .green
+            if PMSelectedCells.contains(indexPath.row) {
+                cell.backgroundColor = .green
+            }
         }
         if indexPath.row > 0 {
             cell.topTime = "\(indexPath.row):00"
@@ -61,7 +65,11 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedCells.append(indexPath.row)
+        if tableView == amTableView {
+            self.AMSelectedCells.append(indexPath.row)
+        } else if tableView == pmTableView {
+            self.PMSelectedCells.append(indexPath.row)
+        }
         tableView.reloadData()
     }
     
