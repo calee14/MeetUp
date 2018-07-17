@@ -50,21 +50,13 @@ class DurationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var testFromMemberPage = TestClass(NewTime: 0, NewMember: 0)//changeForCal
     
-    
-    @IBAction func toCalendar(_ sender: Any) {
-        let intializeCalendarView = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.testboard)//changeForCal
-        self.view.window?.rootViewController = intializeCalendarView
-        self.view.window?.makeKeyAndVisible()
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}
         switch identifier {
         case "toDuration":
             print("Error activation of toDuration segue")
-        case "toCalendar"://changeForCal
-            let destination = segue.destination as! TestViewController
+        case "toDate"://changeForCal
+            let destination = segue.destination as! DateViewController
             destination.testFromDurationPage.NewTime = pickedDuration
             destination.testFromDurationPage.NewMember = testFromMemberPage.NewMember
         default:
