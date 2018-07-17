@@ -18,7 +18,7 @@
 		B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */; };
 		B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BD20FE520A00848B1B /* SetupViewController.swift */; };
 		B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */; };
-		B315B9C220FEA84800848B1B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9C120FEA84800848B1B /* File.swift */; };
+		B315B9C620FEA96000848B1B /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9C520FEA96000848B1B /* MemberViewController.swift */; };
 		B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F37B7720FD143100E323A4 /* AppDelegate.swift */; };
 		B3F37B7D20FD143100E323A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F37B7B20FD143100E323A4 /* Main.storyboard */; };
 		B3F37B7F20FD143300E323A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F37B7E20FD143300E323A4 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 		B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		B315B9BD20FE520A00848B1B /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstion.swift"; sourceTree = "<group>"; };
-		B315B9C120FEA84800848B1B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B315B9C520FEA96000848B1B /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		B3F37B7420FD143100E323A4 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F37B7720FD143100E323A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F37B7C20FD143100E323A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +57,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B315B9C320FEA90300848B1B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B3F37B7B20FD143100E323A4 /* Main.storyboard */,
+				794EB10E20FE548D00719A77 /* Testboard.storyboard */,
+				798F734320FE69DC00253443 /* Result.storyboard */,
+				B315B9B320FD343C00848B1B /* Calendar.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B315B9C420FEA91700848B1B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B315B9BD20FE520A00848B1B /* SetupViewController.swift */,
+				79330ED020FD38A600D72B2A /* DurationViewController.swift */,
+				798F734520FE6A0800253443 /* ResultViewController.swift */,
+				B315B9B520FD346700848B1B /* CalendarViewController.swift */,
+				B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */,
+				B315B9C520FEA96000848B1B /* MemberViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B315B9C720FEA97A00848B1B /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		B315B9C820FEA98A00848B1B /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				79330ED220FD659000D72B2A /* TestingStuff.swift */,
+				794EB11020FE552B00719A77 /* Helper.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		B3F37B6B20FD143100E323A4 = {
 			isa = PBXGroup;
 			children = (
@@ -77,22 +118,13 @@
 			isa = PBXGroup;
 			children = (
 				B3F37B7720FD143100E323A4 /* AppDelegate.swift */,
-				B315B9BD20FE520A00848B1B /* SetupViewController.swift */,
-				79330ED020FD38A600D72B2A /* DurationViewController.swift */,
-				79330ED220FD659000D72B2A /* TestingStuff.swift */,
-				798F734520FE6A0800253443 /* ResultViewController.swift */,
-				794EB11020FE552B00719A77 /* Helper.swift */,
-				B3F37B7B20FD143100E323A4 /* Main.storyboard */,
-				794EB10E20FE548D00719A77 /* Testboard.storyboard */,
-				798F734320FE69DC00253443 /* Result.storyboard */,
-				B315B9B320FD343C00848B1B /* Calendar.storyboard */,
-				B315B9B520FD346700848B1B /* CalendarViewController.swift */,
+				B315B9C420FEA91700848B1B /* ViewControllers */,
+				B315B9C320FEA90300848B1B /* Storyboards */,
+				B315B9C820FEA98A00848B1B /* Misc */,
+				B315B9C720FEA97A00848B1B /* Extentions */,
 				B3F37B7E20FD143300E323A4 /* Assets.xcassets */,
 				B3F37B8020FD143300E323A4 /* LaunchScreen.storyboard */,
 				B3F37B8320FD143300E323A4 /* Info.plist */,
-				B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */,
-				B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */,
-				B315B9C120FEA84800848B1B /* File.swift */,
 			);
 			path = MeetUp;
 			sourceTree = "<group>";
@@ -173,10 +205,10 @@
 			files = (
 				79330ED320FD659000D72B2A /* TestingStuff.swift in Sources */,
 				794EB11120FE552C00719A77 /* Helper.swift in Sources */,
+				B315B9C620FEA96000848B1B /* MemberViewController.swift in Sources */,
 				B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */,
 				B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */,
 				B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */,
-				B315B9C220FEA84800848B1B /* File.swift in Sources */,
 				B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */,
 				B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */,
 				79330ED120FD38A600D72B2A /* DurationViewController.swift in Sources */,
