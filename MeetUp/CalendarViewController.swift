@@ -12,13 +12,20 @@ class CalendarViewController: UIViewController {
 
     @IBOutlet weak var amTableView: UITableView!
     @IBOutlet weak var pmTableView: UITableView!
+    @IBOutlet weak var nextButton: UIBarButtonItem!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
-    var AMSelectedCells: [Int] = [Int]()
-    var PMSelectedCells: [Int] = [Int]()
+    var AMSelectedCells = [Int: Bool]()
+    var PMSelectedCells = [Int: Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        for i in 0...12 {
+            AMSelectedCells[i] = false
+            PMSelectedCells[i] = false
+        }
         
         amTableView.separatorStyle = .none
         pmTableView.separatorStyle = .none
@@ -27,62 +34,83 @@ class CalendarViewController: UIViewController {
         amTableView.register(CalendarTableViewCell.self, forCellReuseIdentifier: "AMCalendarCell")
         pmTableView.register(CalendarTableViewCell.self, forCellReuseIdentifier: "PMCalendarCell")
     }
-
+    @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        
+        let nextCalendar = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        UIViewController.userTimeData.append([AMSelectedCells, PMSelectedCells])
+        print(UIViewController.userTimeData)
+        self.navigationController?.pushViewController(nextCalendar, animated: true)
+    }
+    @IBAction func backButtonTapped(_ sender: Any) {
+        if !UIViewController.userTimeData.isEmpty {
+            UIViewController.userTimeData.removeLast()
+        }
+        print(UIViewController.userTimeData)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return 13
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = CalendarTableViewCell()
         if tableView == amTableView {
-            print("amtable")
             cell = tableView.dequeueReusableCell(withIdentifier: "AMCalendarCell", for: indexPath) as! CalendarTableViewCell
-            if AMSelectedCells.contains(indexPath.row) {
+            if let throwaway = AMSelectedCells[indexPath.row - 1], throwaway == true {
                 cell.backgroundColor = .green
+            }
+            else {
+                cell.backgroundColor = .clear
             }
         } else if tableView == pmTableView {
-            print("pmtable")
             cell = tableView.dequeueReusableCell(withIdentifier: "PMCalendarCell", for: indexPath) as! CalendarTableViewCell
-            if PMSelectedCells.contains(indexPath.row) {
+            if let throwaway = PMSelectedCells[indexPath.row - 1], throwaway == true {
                 cell.backgroundColor = .green
             }
+            else {
+                cell.backgroundColor = .clear
+            }
         }
-        if indexPath.row > 0 {
-            cell.topTime = "\(indexPath.row):00"
+        if indexPath.row >= 0 {
+            if indexPath.row == 0 {
+                cell.topTime = ""
+                cell.bottomTime = "12:00"
+                cell.removeTopSeperatorLine()
+                return cell
+            } else if indexPath.row == 1 {
+                cell.topTime = "12:00"
+            } else {
+                cell.topTime = "\(indexPath.row - 1):00"
+            }
         } else {
             cell.topTime = ""
         }
-        cell.bottomTime = "\(indexPath.row + 1):00"
+        cell.bottomTime = "\(indexPath.row ):00"
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return CGFloat(15)
+        }
         let tableHeight = tableView.frame.size.height
         return CGFloat(tableHeight / 13)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            return
+        }
         if tableView == amTableView {
-            self.AMSelectedCells.append(indexPath.row)
+            self.AMSelectedCells[indexPath.row - 1] = !self.AMSelectedCells[indexPath.row - 1]!
         } else if tableView == pmTableView {
-            self.PMSelectedCells.append(indexPath.row)
+            self.PMSelectedCells[indexPath.row - 1] = !self.PMSelectedCells[indexPath.row - 1]!
         }
         tableView.reloadData()
     }
-    
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        var cell = CalendarTableViewCell()
-//        if tableView == amTableView {
-////            print("amtable")
-//            cell = tableView.dequeueReusableCell(withIdentifier: "AMCalendarCell", for: indexPath) as! CalendarTableViewCell
-//        } else if tableView == pmTableView {
-////            print("pmtable")
-//            cell = tableView.dequeueReusableCell(withIdentifier: "PMCalendarCell", for: indexPath) as! CalendarTableViewCell
-//        }
-//        cell.backgroundColor = .clear
-////        print("selected \(cell.topTimeLabel.text)")
-//    }
 }

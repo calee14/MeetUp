@@ -13,6 +13,7 @@
 		B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B520FD346700848B1B /* CalendarViewController.swift */; };
 		B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */; };
 		B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BD20FE520A00848B1B /* SetupViewController.swift */; };
+		B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */; };
 		B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F37B7720FD143100E323A4 /* AppDelegate.swift */; };
 		B3F37B7D20FD143100E323A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F37B7B20FD143100E323A4 /* Main.storyboard */; };
 		B3F37B7F20FD143300E323A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F37B7E20FD143300E323A4 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		B315B9B520FD346700848B1B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		B315B9BD20FE520A00848B1B /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstion.swift"; sourceTree = "<group>"; };
 		B3F37B7420FD143100E323A4 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F37B7720FD143100E323A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F37B7C20FD143100E323A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				B3F37B8020FD143300E323A4 /* LaunchScreen.storyboard */,
 				B3F37B8320FD143300E323A4 /* Info.plist */,
 				B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */,
+				B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */,
 			);
 			path = MeetUp;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				79330ED320FD659000D72B2A /* TestingStuff.swift in Sources */,
 				B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */,
 				B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */,
+				B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */,
 				B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */,
 				B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */,
 				79330ED120FD38A600D72B2A /* DurationViewController.swift in Sources */,

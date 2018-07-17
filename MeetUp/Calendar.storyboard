@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N3Q-Fg-JbO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eE3-km-fbu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,19 +13,13 @@
         <!--Title-->
         <scene sceneID="xFb-hG-OBk">
             <objects>
-                <viewController id="N3Q-Fg-JbO" customClass="CalendarViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" id="N3Q-Fg-JbO" customClass="CalendarViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXi-u0-IeV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0OI-zo-kPH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                <date key="date" timeIntervalSinceReferenceDate="553466305.72277904">
-                                    <!--2018-07-16 20:38:25 +0000-->
-                                </date>
-                            </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-NG-ebr">
-                                <rect key="frame" x="0.0" y="115" width="375" height="20.5"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHz-bx-zEj">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="20.5"/>
@@ -45,10 +39,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnx-ZL-2p9">
-                                <rect key="frame" x="1" y="135.5" width="374" height="531.5"/>
+                                <rect key="frame" x="1" y="124.5" width="374" height="542.5"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O39-pQ-V0m">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="531.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="542.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AMCalendarCell" id="XO4-AN-6Tt" customClass="CalendarTableViewCell" customModule="MeetUp" customModuleProvider="target">
@@ -67,7 +61,7 @@
                                         </connections>
                                     </tableView>
                                     <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nhL-Ya-Tp4">
-                                        <rect key="frame" x="187" y="0.0" width="187" height="531.5"/>
+                                        <rect key="frame" x="187" y="0.0" width="187" height="542.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PMCalendarCell" id="I8R-SF-g4Q" customClass="CalendarTableViewCell" customModule="MeetUp" customModuleProvider="target">
@@ -97,30 +91,69 @@
                                     <constraint firstAttribute="trailing" secondItem="nhL-Ya-Tp4" secondAttribute="trailing" id="VJn-Q9-93o"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXg-6M-fJg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Alt-xl-vzF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0OI-zo-kPH" firstAttribute="leading" secondItem="GFj-HG-7DY" secondAttribute="leading" id="0j0-4M-2ab"/>
                             <constraint firstItem="GFj-HG-7DY" firstAttribute="trailing" secondItem="Fam-NG-ebr" secondAttribute="trailing" id="3LP-Vq-VYs"/>
-                            <constraint firstItem="Fam-NG-ebr" firstAttribute="top" secondItem="0OI-zo-kPH" secondAttribute="bottom" constant="15" id="45y-QO-yGB"/>
                             <constraint firstItem="Fam-NG-ebr" firstAttribute="leading" secondItem="GFj-HG-7DY" secondAttribute="leading" id="7BG-lj-Wln"/>
-                            <constraint firstItem="0OI-zo-kPH" firstAttribute="top" secondItem="hXi-u0-IeV" secondAttribute="top" id="BeQ-b7-VJl"/>
+                            <constraint firstItem="NXg-6M-fJg" firstAttribute="top" secondItem="GFj-HG-7DY" secondAttribute="top" id="DXv-m2-gSP"/>
                             <constraint firstItem="Pnx-ZL-2p9" firstAttribute="trailing" secondItem="Fam-NG-ebr" secondAttribute="trailing" id="Jy1-Dd-RdV"/>
                             <constraint firstItem="Pnx-ZL-2p9" firstAttribute="top" secondItem="Fam-NG-ebr" secondAttribute="bottom" id="Ys0-wk-wsC"/>
                             <constraint firstItem="Pnx-ZL-2p9" firstAttribute="bottom" secondItem="GFj-HG-7DY" secondAttribute="bottom" id="dOQ-Gg-2Wb"/>
-                            <constraint firstItem="GFj-HG-7DY" firstAttribute="top" secondItem="0OI-zo-kPH" secondAttribute="bottom" constant="-80" id="is3-ht-jMH"/>
-                            <constraint firstItem="0OI-zo-kPH" firstAttribute="trailing" secondItem="GFj-HG-7DY" secondAttribute="trailing" id="lgS-q1-wz6"/>
+                            <constraint firstItem="Fam-NG-ebr" firstAttribute="top" secondItem="NXg-6M-fJg" secondAttribute="bottom" id="dYs-Ku-oMO"/>
+                            <constraint firstItem="NXg-6M-fJg" firstAttribute="leading" secondItem="GFj-HG-7DY" secondAttribute="leading" id="gBi-MF-RGY"/>
+                            <constraint firstItem="GFj-HG-7DY" firstAttribute="trailing" secondItem="NXg-6M-fJg" secondAttribute="trailing" id="lt7-Qu-vnV"/>
                             <constraint firstItem="Pnx-ZL-2p9" firstAttribute="centerX" secondItem="Fam-NG-ebr" secondAttribute="centerX" id="nvW-RG-fUg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GFj-HG-7DY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="qBs-eU-Rfs"/>
+                    <navigationItem key="navigationItem" title="Title" id="qBs-eU-Rfs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="B5j-Fh-na3">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="N3Q-Fg-JbO" id="bbH-C2-Iy5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Cmf-fL-ktl">
+                            <connections>
+                                <action selector="nextButtonTapped:" destination="N3Q-Fg-JbO" id="ze3-lh-Wv7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="amTableView" destination="O39-pQ-V0m" id="x8r-Jd-yUE"/>
+                        <outlet property="backButton" destination="B5j-Fh-na3" id="mn4-Lf-vkB"/>
+                        <outlet property="nextButton" destination="Cmf-fL-ktl" id="Dg0-zU-Kh8"/>
                         <outlet property="pmTableView" destination="nhL-Ya-Tp4" id="TOe-up-st6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dG-73-i1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="71.514242878560722"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zxJ-LK-afb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eE3-km-fbu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MOl-Ii-OVe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N3Q-Fg-JbO" kind="relationship" relationship="rootViewController" id="AyW-7I-ufh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDg-FY-5h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="71.514242878560722"/>
         </scene>
