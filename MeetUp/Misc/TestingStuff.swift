@@ -16,12 +16,12 @@ class TestViewController: UIViewController {
     @IBOutlet weak var durationTest: UILabel!
     
     //    var testFromDurationPage = TestClass(NewTime: 0, NewMember: 0)
-    var testFromDurationPage = TestClass(NewTime: 0, NewMember: 0)
+    var testFromDatePage = TestClass(NewTime: 0, NewMember: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        durationTest.text = String(describing: testFromDurationPage.NewTime!)
-        memberTest.text = String(describing: testFromDurationPage.NewMember!)
+        durationTest.text = String(describing: testFromDatePage.NewTime!)
+        memberTest.text = String(describing: testFromDatePage.NewMember!)
     }
     
     @IBAction func unwindFromCalendar(_ segue: UIStoryboardSegue) {
