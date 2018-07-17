@@ -1,7 +1,128 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N3Q-Fg-JbO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="xFb-hG-OBk">
+            <objects>
+                <viewController id="N3Q-Fg-JbO" customClass="CalendarViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hXi-u0-IeV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0OI-zo-kPH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <date key="date" timeIntervalSinceReferenceDate="553466305.72277904">
+                                    <!--2018-07-16 20:38:25 +0000-->
+                                </date>
+                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fam-NG-ebr">
+                                <rect key="frame" x="0.0" y="115" width="375" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHz-bx-zEj">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqk-Yu-1Vp">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Pqk-Yu-1Vp" firstAttribute="width" secondItem="MHz-bx-zEj" secondAttribute="width" id="Puc-A2-LfT"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnx-ZL-2p9">
+                                <rect key="frame" x="1" y="135.5" width="374" height="531.5"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O39-pQ-V0m">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="531.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AMCalendarCell" id="XO4-AN-6Tt" customClass="CalendarTableViewCell" customModule="MeetUp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="187" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XO4-AN-6Tt" id="6zO-fC-7Li">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="N3Q-Fg-JbO" id="1Vs-q9-Ynz"/>
+                                            <outlet property="delegate" destination="N3Q-Fg-JbO" id="ecX-zG-ILI"/>
+                                        </connections>
+                                    </tableView>
+                                    <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nhL-Ya-Tp4">
+                                        <rect key="frame" x="187" y="0.0" width="187" height="531.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PMCalendarCell" id="I8R-SF-g4Q" customClass="CalendarTableViewCell" customModule="MeetUp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="187" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I8R-SF-g4Q" id="AR5-OF-fuc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="N3Q-Fg-JbO" id="piX-uJ-awL"/>
+                                            <outlet property="delegate" destination="N3Q-Fg-JbO" id="K27-yj-L5m"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="O39-pQ-V0m" firstAttribute="top" secondItem="Pnx-ZL-2p9" secondAttribute="top" id="6bm-TH-u8p"/>
+                                    <constraint firstItem="nhL-Ya-Tp4" firstAttribute="leading" secondItem="O39-pQ-V0m" secondAttribute="trailing" id="Ax3-ZW-K0k"/>
+                                    <constraint firstItem="nhL-Ya-Tp4" firstAttribute="width" secondItem="O39-pQ-V0m" secondAttribute="width" id="B1q-OI-cWt"/>
+                                    <constraint firstItem="nhL-Ya-Tp4" firstAttribute="top" secondItem="Pnx-ZL-2p9" secondAttribute="top" id="Bjb-y7-ck3"/>
+                                    <constraint firstAttribute="bottom" secondItem="nhL-Ya-Tp4" secondAttribute="bottom" id="C8u-Or-kOo"/>
+                                    <constraint firstItem="O39-pQ-V0m" firstAttribute="leading" secondItem="Pnx-ZL-2p9" secondAttribute="leading" id="MNc-ku-fEZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="O39-pQ-V0m" secondAttribute="bottom" id="Rm7-ed-UGu"/>
+                                    <constraint firstAttribute="trailing" secondItem="nhL-Ya-Tp4" secondAttribute="trailing" id="VJn-Q9-93o"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0OI-zo-kPH" firstAttribute="leading" secondItem="GFj-HG-7DY" secondAttribute="leading" id="0j0-4M-2ab"/>
+                            <constraint firstItem="GFj-HG-7DY" firstAttribute="trailing" secondItem="Fam-NG-ebr" secondAttribute="trailing" id="3LP-Vq-VYs"/>
+                            <constraint firstItem="Fam-NG-ebr" firstAttribute="top" secondItem="0OI-zo-kPH" secondAttribute="bottom" constant="15" id="45y-QO-yGB"/>
+                            <constraint firstItem="Fam-NG-ebr" firstAttribute="leading" secondItem="GFj-HG-7DY" secondAttribute="leading" id="7BG-lj-Wln"/>
+                            <constraint firstItem="0OI-zo-kPH" firstAttribute="top" secondItem="hXi-u0-IeV" secondAttribute="top" id="BeQ-b7-VJl"/>
+                            <constraint firstItem="Pnx-ZL-2p9" firstAttribute="trailing" secondItem="Fam-NG-ebr" secondAttribute="trailing" id="Jy1-Dd-RdV"/>
+                            <constraint firstItem="Pnx-ZL-2p9" firstAttribute="top" secondItem="Fam-NG-ebr" secondAttribute="bottom" id="Ys0-wk-wsC"/>
+                            <constraint firstItem="Pnx-ZL-2p9" firstAttribute="bottom" secondItem="GFj-HG-7DY" secondAttribute="bottom" id="dOQ-Gg-2Wb"/>
+                            <constraint firstItem="GFj-HG-7DY" firstAttribute="top" secondItem="0OI-zo-kPH" secondAttribute="bottom" constant="-80" id="is3-ht-jMH"/>
+                            <constraint firstItem="0OI-zo-kPH" firstAttribute="trailing" secondItem="GFj-HG-7DY" secondAttribute="trailing" id="lgS-q1-wz6"/>
+                            <constraint firstItem="Pnx-ZL-2p9" firstAttribute="centerX" secondItem="Fam-NG-ebr" secondAttribute="centerX" id="nvW-RG-fUg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GFj-HG-7DY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="qBs-eU-Rfs"/>
+                    <connections>
+                        <outlet property="amTableView" destination="O39-pQ-V0m" id="x8r-Jd-yUE"/>
+                        <outlet property="pmTableView" destination="nhL-Ya-Tp4" id="TOe-up-st6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dG-73-i1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="71.514242878560722"/>
+        </scene>
+    </scenes>
 </document>

@@ -10,6 +10,7 @@
 		B315B9B420FD343C00848B1B /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B315B9B320FD343C00848B1B /* Calendar.storyboard */; };
 		B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B520FD346700848B1B /* CalendarViewController.swift */; };
 		B315B9B820FD349500848B1B /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B720FD349500848B1B /* SetUpViewController.swift */; };
+		B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */; };
 		B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F37B7720FD143100E323A4 /* AppDelegate.swift */; };
 		B3F37B7A20FD143100E323A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F37B7920FD143100E323A4 /* ViewController.swift */; };
 		B3F37B7D20FD143100E323A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F37B7B20FD143100E323A4 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		B315B9B320FD343C00848B1B /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		B315B9B520FD346700848B1B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B315B9B720FD349500848B1B /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		B3F37B7420FD143100E323A4 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F37B7720FD143100E323A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F37B7920FD143100E323A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				B3F37B7E20FD143300E323A4 /* Assets.xcassets */,
 				B3F37B8020FD143300E323A4 /* LaunchScreen.storyboard */,
 				B3F37B8320FD143300E323A4 /* Info.plist */,
+				B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */,
 			);
 			path = MeetUp;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				B315B9B820FD349500848B1B /* SetUpViewController.swift in Sources */,
 				B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */,
 				B3F37B7A20FD143100E323A4 /* ViewController.swift in Sources */,
+				B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */,
 				B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
