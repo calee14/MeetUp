@@ -117,7 +117,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-3X-lUx">
                                 <rect key="frame" x="20" y="275.5" width="335" height="180.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long is the event going to last?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-D1-qz8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long is the meeting going to last?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-D1-qz8">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -158,7 +158,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Next" id="sUq-TI-Ghb">
                             <connections>
                                 <action selector="toCalendarTest:" destination="aMa-rj-9VM" id="JfM-w6-ua8"/>
-                                <segue destination="FsW-Vw-nSZ" kind="show" identifier="toCalendar" id="QXt-aP-TBE"/>
+                                <segue destination="t1v-lb-1ig" kind="show" identifier="toDate" id="Iwt-ae-xlo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -178,7 +178,54 @@
                 <viewControllerPlaceholder storyboardIdentifier="TestViewController" storyboardName="Testboard" referencedIdentifier="TestViewController" id="FsW-Vw-nSZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNl-8R-RDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3362" y="101"/>
+            <point key="canvasLocation" x="4203" y="132"/>
+        </scene>
+        <!--Date-->
+        <scene sceneID="M8k-UL-vfl">
+            <objects>
+                <viewController id="t1v-lb-1ig" customClass="DateViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ba-VV-s4b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-wt-Flu">
+                                <rect key="frame" x="10" y="242.5" width="355" height="246.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On what date do you want to meet up?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-EL-Shc">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9K3-9k-wkj">
+                                        <rect key="frame" x="0.0" y="30.5" width="355" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="553559969.24023604">
+                                            <!--2018-07-17 22:39:29 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qrh-wt-Flu" firstAttribute="centerY" secondItem="bL2-UI-AQL" secondAttribute="centerY" id="3KW-Wv-89P"/>
+                            <constraint firstItem="qrh-wt-Flu" firstAttribute="centerX" secondItem="bL2-UI-AQL" secondAttribute="centerX" id="5sp-Dn-suF"/>
+                            <constraint firstAttribute="trailing" secondItem="qrh-wt-Flu" secondAttribute="trailing" constant="10" id="Jnh-6B-4fo"/>
+                            <constraint firstItem="qrh-wt-Flu" firstAttribute="leading" secondItem="8ba-VV-s4b" secondAttribute="leading" constant="10" id="MgT-Us-9JV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bL2-UI-AQL"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Date" id="5Zl-WQ-tD6">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="AHz-ZU-Idz">
+                            <connections>
+                                <segue destination="FsW-Vw-nSZ" kind="show" identifier="toCalendar" id="M4I-vG-QVm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7KV-w5-Nh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3566" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Idi-XO-geF">

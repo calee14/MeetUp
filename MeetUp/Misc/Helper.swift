@@ -12,10 +12,16 @@ import UIKit
 class TestClass {
     var NewTime: Int?
     var NewMember: Int?
+    var NewDate: Date?
     
-    init(NewTime: Int, NewMember: Int){
+    init(NewTime: Int, NewMember: Int, NewDate: Date?) {
         self.NewTime = NewTime
         self.NewMember = NewMember
+        self.NewDate = NewDate
+    }
+    
+    convenience init(NewTime: Int, NewMember: Int) {
+        self.init(NewTime: NewTime, NewMember: NewMember, NewDate: Date())
     }
 }
 
