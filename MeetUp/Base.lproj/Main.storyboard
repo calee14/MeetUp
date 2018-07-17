@@ -157,7 +157,8 @@
                     <navigationItem key="navigationItem" title="Duration" id="xbe-Mb-7Xl">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="sUq-TI-Ghb">
                             <connections>
-                                <segue destination="SW0-os-RBK" kind="show" identifier="toTest" id="Tpj-JS-sjJ"/>
+                                <action selector="toCalendarTest:" destination="aMa-rj-9VM" id="JfM-w6-ua8"/>
+                                <segue destination="FsW-Vw-nSZ" kind="show" identifier="toCalendar" id="QXt-aP-TBE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -171,40 +172,13 @@
             </objects>
             <point key="canvasLocation" x="2743" y="133"/>
         </scene>
-        <!--Test View Controller-->
-        <scene sceneID="VT8-VY-34w">
+        <!--TestViewController-->
+        <scene sceneID="49J-V4-tSl">
             <objects>
-                <viewController id="SW0-os-RBK" customClass="TestViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qtu-zk-yph">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-Z5-KoC">
-                                <rect key="frame" x="166" y="224" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpe-5X-zCz">
-                                <rect key="frame" x="166" y="401" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="NyM-vo-uhp"/>
-                    </view>
-                    <connections>
-                        <outlet property="durationTest" destination="Xpe-5X-zCz" id="tya-bU-bt1"/>
-                        <outlet property="memberTest" destination="faH-Z5-KoC" id="35o-Bx-kMJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c4P-7U-wfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="TestViewController" storyboardName="Testboard" referencedIdentifier="TestViewController" id="FsW-Vw-nSZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNl-8R-RDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3634" y="134"/>
+            <point key="canvasLocation" x="3362" y="101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Idi-XO-geF">
