@@ -14,6 +14,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var pmTableView: UITableView!
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var dateLabel: UILabel!
     
     var AMSelectedCells = [Int: Bool]()
     var PMSelectedCells = [Int: Bool]()
@@ -30,7 +31,8 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(CalendarViewController.testFromDatePage.NewDate)
+//        print(CalendarViewController.testFromDatePage.NewDate)
+        dateLabel.text = CalendarViewController.testFromDatePage.NewDate
         for i in 0...12 {
             AMSelectedCells[i] = false
             PMSelectedCells[i] = false

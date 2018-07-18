@@ -18,7 +18,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dataLabel.text = "Date: \(CalendarViewController.testFromDatePage.NewDate!)"
         timeLabel.text = "Time: \(CalculateTime.calculate(superDict: CalculateTime.changeTimeDataType(), pickedDuration: (CalendarViewController.testFromDatePage.NewTime)!, pickedNumberOfPeople: (CalendarViewController.testFromDatePage.NewMember)!))"
         
     }

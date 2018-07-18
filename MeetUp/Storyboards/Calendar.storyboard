@@ -131,6 +131,7 @@
                     <connections>
                         <outlet property="amTableView" destination="O39-pQ-V0m" id="x8r-Jd-yUE"/>
                         <outlet property="backButton" destination="B5j-Fh-na3" id="mn4-Lf-vkB"/>
+                        <outlet property="dateLabel" destination="NXg-6M-fJg" id="TdB-LZ-iSj"/>
                         <outlet property="nextButton" destination="Cmf-fL-ktl" id="Dg0-zU-Kh8"/>
                         <outlet property="pmTableView" destination="nhL-Ya-Tp4" id="TOe-up-st6"/>
                         <segue destination="tnh-q3-4Pp" kind="show" identifier="donePlanning" id="B47-Tu-vva"/>
