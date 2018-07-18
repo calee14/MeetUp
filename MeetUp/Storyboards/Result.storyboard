@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="gIs-hI-P5T">
-                                <rect key="frame" x="20" y="285.5" width="335" height="160"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="gIs-hI-P5T">
+                                <rect key="frame" x="20" y="288.5" width="335" height="155"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here are the results!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAo-TU-S4p">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -31,16 +31,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4N-MG-Qe6">
+                                        <rect key="frame" x="0.0" y="48" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-Rj-Lts">
+                                        <rect key="frame" x="0.0" y="86.5" width="335" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-SO-Wrg">
-                                        <rect key="frame" x="0.0" y="130" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="125" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="dPh-VO-sYd"/>
                                         </constraints>
                                         <state key="normal" title="Want to set up a new one?"/>
                                         <connections>
-
                                             <action selector="resetButtonTapped:" destination="bco-Wk-qlB" eventType="touchUpInside" id="5ow-Bt-Bwy"/>
-
                                             <segue destination="7Uw-0X-mzh" kind="unwind" unwindAction="unwindFromResult:" id="Kmz-ZL-9YX"/>
                                         </connections>
                                     </button>
@@ -58,11 +68,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QiB-vu-aet"/>
                     </view>
-                    
                     <connections>
+                        <outlet property="dataLabel" destination="v4N-MG-Qe6" id="hqd-UK-SgM"/>
                         <outlet property="resetButton" destination="DgZ-SO-Wrg" id="qmV-la-KB6"/>
+                        <outlet property="timeLabel" destination="UT9-Rj-Lts" id="1Ko-CU-M8K"/>
                     </connections>
-
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djk-tC-Tad" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7Uw-0X-mzh" userLabel="Exit" sceneMemberID="exit"/>
