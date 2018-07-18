@@ -12,6 +12,7 @@ import UIKit
 class ResultViewController: UIViewController {
     var incomingResults = ResultClass(NewArray: [[0,0],[1,1],[2,2]])
     
+    @IBOutlet weak var resetButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,6 +24,13 @@ class ResultViewController: UIViewController {
             self.view.window?.rootViewController = initialViewController
             // 4
             self.view.window?.makeKeyAndVisible()
+        }
+    }
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        if let nvc = navigationController {
+            nvc.popViewController(animated: true)
+        } else {
+            dismiss(animated: true, completion: nil)
         }
     }
     

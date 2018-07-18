@@ -133,11 +133,20 @@
                         <outlet property="backButton" destination="B5j-Fh-na3" id="mn4-Lf-vkB"/>
                         <outlet property="nextButton" destination="Cmf-fL-ktl" id="Dg0-zU-Kh8"/>
                         <outlet property="pmTableView" destination="nhL-Ya-Tp4" id="TOe-up-st6"/>
+                        <segue destination="tnh-q3-4Pp" kind="show" identifier="donePlanning" id="B47-Tu-vva"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dG-73-i1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="71.514242878560722"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="heh-hS-AXk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Result" id="tnh-q3-4Pp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DJ-TO-Dmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zxJ-LK-afb">
