@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Set Up Hours-->
         <scene sceneID="xFb-hG-OBk">
             <objects>
                 <viewController storyboardIdentifier="CalendarViewController" id="N3Q-Fg-JbO" customClass="CalendarViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,7 +116,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GFj-HG-7DY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="qBs-eU-Rfs">
+                    <navigationItem key="navigationItem" title="Set Up Hours" id="qBs-eU-Rfs">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="B5j-Fh-na3">
                             <connections>
                                 <action selector="backButtonTapped:" destination="N3Q-Fg-JbO" id="bbH-C2-Iy5"/>
