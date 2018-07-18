@@ -13,13 +13,21 @@ class DateViewController: UIViewController {
     
     var testFromDurationPage = TestClass(NewTime: 0, NewMember: 0)
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        let strDate = datePicker.date.convertToString()
+        testFromDurationPage.NewDate = strDate
+    }
+    
     @IBAction func toCalendar(_ sender: Any) {
         let intializeCalendarView = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.testboard)//changeForCal
         self.view.window?.rootViewController = intializeCalendarView
         self.view.window?.makeKeyAndVisible()
+        datePicker.datePickerMode = UIDatePickerMode.date
     }
     
-    var pickedDate: Date?
+//    var pickedDate: Date?
     //Pei, write code to change pickedDate
     
     
@@ -28,7 +36,7 @@ class DateViewController: UIViewController {
         switch identifier {
         case "toCalendar":
             CalendarViewController.currentNumOfMembers = 0
-            CalendarViewController.testFromDatePage = TestClass(NewTime: testFromDurationPage.NewTime!, NewMember: testFromDurationPage.NewMember!, NewDate: pickedDate)
+            CalendarViewController.testFromDatePage = TestClass(NewTime: testFromDurationPage.NewTime!, NewMember: testFromDurationPage.NewMember!, NewDate: testFromDurationPage.NewDate!)
         default:
             print("something went wrong")
         }
