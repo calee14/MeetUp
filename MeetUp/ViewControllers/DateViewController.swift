@@ -25,7 +25,7 @@ class DateViewController: UIViewController {
         guard let identifier = segue.identifier else {return}
         switch identifier {
         case "toCalendar"://changeForCal
-            let destination = segue.destination as! TestViewController
+            let destination = segue.destination as! CalendarViewController
             destination.testFromDatePage.NewTime = testFromDurationPage.NewTime
             destination.testFromDatePage.NewMember = testFromDurationPage.NewMember
             destination.testFromDatePage.NewDate = testFromDurationPage.NewDate

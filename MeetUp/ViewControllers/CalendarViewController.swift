@@ -18,6 +18,14 @@ class CalendarViewController: UIViewController {
     var AMSelectedCells = [Int: Bool]()
     var PMSelectedCells = [Int: Bool]()
     
+//    var numOfMembers: Int! = 3
+//    var duration: Int!
+    //accepting values from Main storyboard
+    var testFromDatePage = TestClass(NewTime: 0, NewMember: 3)
+    //    to call the variables passed from main storyboard: testFromDatePage.NewTime/NewMember/NewDate
+    
+    static var currentNumOfMembers = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,14 +43,31 @@ class CalendarViewController: UIViewController {
         pmTableView.register(CalendarTableViewCell.self, forCellReuseIdentifier: "PMCalendarCell")
     }
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-        
-        let nextCalendar = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        CalendarViewController.currentNumOfMembers += 1
+        print(CalendarViewController.currentNumOfMembers)
         UIViewController.userTimeData.append([AMSelectedCells, PMSelectedCells])
-        print(UIViewController.userTimeData)
-        self.navigationController?.pushViewController(nextCalendar, animated: true)
+        if CalendarViewController.currentNumOfMembers == testFromDatePage.NewMember {
+            print("Cool!")
+            let storyboard = UIStoryboard(name: "Result", bundle: .main)
+            
+            // 2
+            if let initialViewController = storyboard.instantiateInitialViewController() {
+                // 3
+                self.view.window?.rootViewController = initialViewController
+                // 4
+                self.view.window?.makeKeyAndVisible()
+            }
+            //add next view onto stack
+        }
+        else {
+            let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+            
+            let nextCalendar = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+            self.navigationController?.pushViewController(nextCalendar, animated: true)
+        }
     }
     @IBAction func backButtonTapped(_ sender: Any) {
+        CalendarViewController.currentNumOfMembers -= 1
         if !UIViewController.userTimeData.isEmpty {
             UIViewController.userTimeData.removeLast()
         }
