@@ -12,6 +12,7 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBOutlet weak var peopleLabel: UILabel!
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -36,6 +37,7 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         print(pickedNumberOfPeople)
     }
     
+
     @IBOutlet weak var picker: UIPickerView!
     var pickerData: [String] = [String]()
 

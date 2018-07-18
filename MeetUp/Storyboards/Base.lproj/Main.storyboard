@@ -130,6 +130,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="peopleLabel" destination="dXu-2V-Bfg" id="WOn-hq-6ug"/>
+                        <outlet property="picker" destination="C9w-jd-eXW" id="Enn-GZ-UUU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGe-Aa-v7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
