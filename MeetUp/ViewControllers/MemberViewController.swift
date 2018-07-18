@@ -29,7 +29,7 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return pickerData[row]
     }
     
-    var pickedNumberOfPeople = 0
+    var pickedNumberOfPeople = 1
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         pickedNumberOfPeople = row + 1

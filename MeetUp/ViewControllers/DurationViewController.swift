@@ -30,7 +30,7 @@ class DurationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return eventPickerData[row]
     }
     
-    var pickedDuration: Int = 0
+    var pickedDuration: Int = 1
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         pickedDuration = row + 1
