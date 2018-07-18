@@ -38,6 +38,7 @@
                                         </constraints>
                                         <state key="normal" title="Want to set up a new one?"/>
                                         <connections>
+                                            <action selector="resetButtonTapped:" destination="bco-Wk-qlB" eventType="touchUpInside" id="5ow-Bt-Bwy"/>
                                             <segue destination="7Uw-0X-mzh" kind="unwind" unwindAction="unwindFromResult:" id="Kmz-ZL-9YX"/>
                                         </connections>
                                     </button>
@@ -55,6 +56,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QiB-vu-aet"/>
                     </view>
+                    <connections>
+                        <outlet property="resetButton" destination="DgZ-SO-Wrg" id="qmV-la-KB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djk-tC-Tad" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7Uw-0X-mzh" userLabel="Exit" sceneMemberID="exit"/>
