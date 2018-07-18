@@ -19,14 +19,16 @@ class DateViewController: UIViewController {
         self.view.window?.makeKeyAndVisible()
     }
     
-//    var pickedDate =
+    var pickedDate: Date?
+    //Pei, write code to change pickedDate
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}
         switch identifier {
         case "toCalendar":
             CalendarViewController.currentNumOfMembers = 0
-            CalendarViewController.testFromDatePage = TestClass(NewTime: testFromDurationPage.NewTime!, NewMember: testFromDurationPage.NewMember!)
+            CalendarViewController.testFromDatePage = TestClass(NewTime: testFromDurationPage.NewTime!, NewMember: testFromDurationPage.NewMember!, NewDate: pickedDate)
         default:
             print("something went wrong")
         }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct CalculateTime {
-    static func calculate(superDict: [[Int : Bool]], pickedDuration: Int, pickedNumberOfPeople: Int) {
+    static func calculate(superDict: [[Int : Bool]], pickedDuration: Int, pickedNumberOfPeople: Int) -> String {
 //        var user1 = [Int: Bool]()
 //        var user2 = [Int: Bool]()
 //        var user3 = [Int: Bool]()
@@ -82,8 +82,8 @@ struct CalculateTime {
         var finalCheckArray = [String]()
         var finalSolution = [Int]()
         for value in startingTimes[0]{
-            for thirdIndex in  1...oneLessPeople{
-                for eachCell in startingTimes[thirdIndex]{
+            for index in  0...oneLessPeople{
+                for eachCell in startingTimes[index]{
                     if eachCell == value{
                         finalCheckArray.append("yes")
                     } else{
@@ -93,7 +93,7 @@ struct CalculateTime {
                 
             }
             
-            if finalCheckArray.count == oneLessPeople{
+            if finalCheckArray.count == pickedNumberOfPeople{
                 finalSolution.append(value)
                 finalCheckArray=[]
             } else{
@@ -101,6 +101,7 @@ struct CalculateTime {
             }
         }
         
+        var solutionArray = [String]()
         
         if finalSolution.count>0{
             print("The following meeting times work for your group:")
@@ -110,34 +111,42 @@ struct CalculateTime {
                     var new=finalTime+12
                     if endingTime<12{
                         print("\(String(new)):00 AM to \(String(endingTime)):00 AM")
+                        solutionArray.append("\(String(new)):00 AM to \(String(endingTime)):00 AM")
                     }
                     else if endingTime==12{
                         print("\(String(new)):00 AM to \(String(endingTime)):00 PM")
+                        solutionArray.append("\(String(new)):00 AM to \(String(endingTime)):00 PM")
                     }
                     else if endingTime==24{
                         endingTime-=12
                         print("\(String(new)):00 AM to \(String(endingTime)):00 AM")
+                        solutionArray.append("\(String(new)):00 AM to \(String(endingTime)):00 AM")
                     }
                     else{
                         endingTime-=12
                         print("\(String(new)):00 AM to \(String(endingTime)):00 PM")
+                        solutionArray.append("\(String(new)):00 AM to \(String(endingTime)):00 PM")
                     }
                 }
                     
                 else if finalTime<12{
                     if endingTime<12{
                         print("\(String(finalTime)):00 AM to \(String(endingTime)):00 AM")
+                        solutionArray.append("\(String(finalTime)):00 AM to \(String(endingTime)):00 AM")
                     }
                     else if endingTime==12{
                         print("\(String(finalTime)):00 AM to \(String(endingTime)):00 PM")
+                        solutionArray.append("\(String(finalTime)):00 AM to \(String(endingTime)):00 PM")
                     }
                     else if endingTime==24{
                         endingTime-=12
                         print("\(String(finalTime)):00 AM to \(String(endingTime)):00 AM")
+                        solutionArray.append("\(String(finalTime)):00 AM to \(String(endingTime)):00 AM")
                     }
                     else{
                         endingTime-=12
                         print("\(String(finalTime)):00 AM to \(String(endingTime)):00 PM")
+                        solutionArray.append("\(String(finalTime)):00 AM to \(String(endingTime)):00 PM")
                     }
                     
                 }
@@ -146,9 +155,11 @@ struct CalculateTime {
                     if endingTime==24{
                         endingTime-=12
                         print("\(String(finalTime)):00 PM to \(String(endingTime)):00 AM")
+                        solutionArray.append("\(String(finalTime)):00 PM to \(String(endingTime)):00 AM")
                     } else{
                         endingTime-=12
                         print("\(String(finalTime)):00 PM to \(String(endingTime)):00 PM")
+                        solutionArray.append("\(String(finalTime)):00 PM to \(String(endingTime)):00 PM")
                     }
                 }
                     
@@ -157,10 +168,12 @@ struct CalculateTime {
                     if endingTime==24{
                         endingTime-=12
                         print("\(String(newFinalTime)):00 PM to \(String(endingTime)):00 AM")
+                        solutionArray.append("\(String(newFinalTime)):00 PM to \(String(endingTime)):00 AM")
                     }
                     else{
                         endingTime-=12
                         print("\(String(newFinalTime)):00 PM to \(String(endingTime)):00 PM")
+                        solutionArray.append("\(String(newFinalTime)):00 PM to \(String(endingTime)):00 PM")
                     }
                 }
                 
@@ -169,6 +182,26 @@ struct CalculateTime {
             
         else{
             print("No meeting times work for your group")
+            solutionArray.append("No meeting times work for your group")
         }
+        
+        return solutionArray[Int(arc4random_uniform(UInt32(solutionArray.count)))]
+        
+    }
+    
+    static func changeTimeDataType() -> [[Int: Bool]] {
+        var result = [[Int : Bool]]()
+        let data = UIViewController.userTimeData
+        for users in data {
+            var user = [Int: Bool]()
+            for amUser in users[0] {
+                user[amUser.key] = amUser.value
+            }
+            for pmUser in users[1] {
+                user[pmUser.key + 12] = pmUser.value
+            }
+            result.append(user)
+        }
+        return result
     }
 }
