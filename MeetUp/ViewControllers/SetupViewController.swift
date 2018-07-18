@@ -38,11 +38,11 @@ class SetupViewController: UIViewController {
     
     @IBAction func unwindFromResult(_ segue: UIStoryboardSegue) {
         print("unwind from result")//changeForCal
-        let initialViewController = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
-        self.view.window?.rootViewController = initialViewController
-        let backToNew = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
-        self.view.window?.rootViewController = backToNew
-        self.view.window?.makeKeyAndVisible()
+//        let initialViewController = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
+//        self.view.window?.rootViewController = initialViewController
+//        let backToNew = UIStoryboard.initializeViewController(for: UIStoryboard.MeetSBType.main)
+//        self.view.window?.rootViewController = backToNew
+//        self.view.window?.makeKeyAndVisible()
     }
 
 }

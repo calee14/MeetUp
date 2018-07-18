@@ -24,11 +24,11 @@ class ResultViewController: UIViewController {
     }
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         UIViewController.userTimeData = [[[Int : Bool]]]()
-        if let nvc = navigationController {
-            nvc.popViewController(animated: true)
-        } else {
-            dismiss(animated: true, completion: nil)
-        }
+//        if let nvc = navigationController {
+//            nvc.popViewController(animated: true)
+//        } else {
+//            dismiss(animated: true, completion: nil)
+//        }
     }
     
 }
