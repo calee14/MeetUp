@@ -21,7 +21,8 @@ class CalendarViewController: UIViewController {
 //    var numOfMembers: Int! = 3
 //    var duration: Int!
     //accepting values from Main storyboard
-    static var testFromDatePage: TestClass?
+//    static var testFromDatePage: TestClass?
+    static var testFromDatePage = TestClass.init(NewTime: 1, NewMember: 1)
     //    to call the variables passed from main storyboard: testFromDatePage.NewTime/NewMember/NewDate
     
     static var currentNumOfMembers = 0
@@ -29,7 +30,7 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        print(CalendarViewController.testFromDatePage.NewDate)
         for i in 0...12 {
             AMSelectedCells[i] = false
             PMSelectedCells[i] = false
@@ -45,7 +46,7 @@ class CalendarViewController: UIViewController {
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
         CalendarViewController.currentNumOfMembers += 1
         UIViewController.userTimeData.append([AMSelectedCells, PMSelectedCells])
-        if CalendarViewController.currentNumOfMembers == CalendarViewController.testFromDatePage?.NewMember {
+        if CalendarViewController.currentNumOfMembers == CalendarViewController.testFromDatePage.NewMember {
             
             self.performSegue(withIdentifier: "donePlanning", sender: self)
         }

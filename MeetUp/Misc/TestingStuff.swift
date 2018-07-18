@@ -59,7 +59,7 @@ class TestViewController: UIViewController {
         switch identifier {
         case "displayResult":
             let destination = segue.destination as! ResultViewController
-            destination.incomingResults = ResultClass(NewArray: [[0,0,0],[1,1,1],[2,2,2]])
+//            destination.incomingResults = ResultClass(NewArray: [[0,0,0],[1,1,1],[2,2,2]])
         default:
             print("something went wrong")
         }

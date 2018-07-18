@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ResultViewController: UIViewController {
-    weak var incomingResults = ResultClass(NewArray: [[0,0],[1,1],[2,2]])
+//    weak var incomingResults = ResultClass(NewArray: [[0,0],[1,1],[2,2]])
     
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var dataLabel: UILabel!
@@ -19,7 +19,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeLabel.text = "Time: \(CalculateTime.calculate(superDict: CalculateTime.changeTimeDataType(), pickedDuration: (CalendarViewController.testFromDatePage?.NewTime)!, pickedNumberOfPeople: (CalendarViewController.testFromDatePage?.NewMember)!))"
+        timeLabel.text = "Time: \(CalculateTime.calculate(superDict: CalculateTime.changeTimeDataType(), pickedDuration: (CalendarViewController.testFromDatePage.NewTime)!, pickedNumberOfPeople: (CalendarViewController.testFromDatePage.NewMember)!))"
         
     }
     @IBAction func resetButtonTapped(_ sender: UIButton) {

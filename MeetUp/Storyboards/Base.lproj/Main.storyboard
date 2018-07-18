@@ -255,6 +255,9 @@
                                                 <date key="date" timeIntervalSinceReferenceDate="553559969.24023604">
                                                     <!--2018-07-17 22:39:29 +0000-->
                                                 </date>
+                                                <connections>
+                                                    <action selector="datePickerChanged:" destination="t1v-lb-1ig" eventType="valueChanged" id="Hjo-Ee-AIA"/>
+                                                </connections>
                                             </datePicker>
                                         </subviews>
                                         <constraints>
@@ -287,6 +290,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="9K3-9k-wkj" id="y0q-ld-0Iu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KV-w5-Nh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

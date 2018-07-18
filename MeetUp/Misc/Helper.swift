@@ -12,25 +12,31 @@ import UIKit
 class TestClass {
     var NewTime: Int?
     var NewMember: Int?
-    var NewDate: Date?
+    var NewDate: String?
     
-    init(NewTime: Int, NewMember: Int, NewDate: Date?) {
+    init(NewTime: Int, NewMember: Int, NewDate: String?) {
         self.NewTime = NewTime
         self.NewMember = NewMember
         self.NewDate = NewDate
     }
     
     convenience init(NewTime: Int, NewMember: Int) {
-        self.init(NewTime: NewTime, NewMember: NewMember, NewDate: Date())
+        self.init(NewTime: NewTime, NewMember: NewMember, NewDate: Date().convertToString())
     }
 }
 
-class ResultClass {
-    var NewArray: [[Int]]?
-    init(NewArray: [[Int]]) {
-        self.NewArray = NewArray
+extension Date {
+    func convertToString() -> String {
+        return DateFormatter.localizedString(from: self, dateStyle: DateFormatter.Style.medium, timeStyle: DateFormatter.Style.medium)
     }
 }
+
+//class ResultClass {
+//    var NewArray: [[Int]]?
+//    init(NewArray: [[Int]]) {
+//        self.NewArray = NewArray
+//    }
+//}
 
 extension UIStoryboard {
     enum MeetSBType: String {
