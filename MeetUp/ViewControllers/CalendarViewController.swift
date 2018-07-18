@@ -46,6 +46,7 @@ class CalendarViewController: UIViewController {
         CalendarViewController.currentNumOfMembers += 1
         UIViewController.userTimeData.append([AMSelectedCells, PMSelectedCells])
         if CalendarViewController.currentNumOfMembers == CalendarViewController.testFromDatePage?.NewMember {
+            
             self.performSegue(withIdentifier: "donePlanning", sender: self)
         }
         else {
