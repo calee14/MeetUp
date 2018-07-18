@@ -122,7 +122,7 @@
                                 <action selector="backButtonTapped:" destination="N3Q-Fg-JbO" id="bbH-C2-Iy5"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="Cmf-fL-ktl">
+                        <barButtonItem key="rightBarButtonItem" title="Next User" id="Cmf-fL-ktl">
                             <connections>
                                 <action selector="nextButtonTapped:" destination="N3Q-Fg-JbO" id="ze3-lh-Wv7"/>
                             </connections>
