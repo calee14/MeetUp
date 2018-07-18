@@ -24,11 +24,9 @@ class DateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else {return}
         switch identifier {
-        case "toCalendar"://changeForCal
-            let destination = segue.destination as! CalendarViewController
-            destination.testFromDatePage.NewTime = testFromDurationPage.NewTime
-            destination.testFromDatePage.NewMember = testFromDurationPage.NewMember
-            destination.testFromDatePage.NewDate = testFromDurationPage.NewDate
+        case "toCalendar":
+            CalendarViewController.currentNumOfMembers = 0
+            CalendarViewController.testFromDatePage = TestClass(NewTime: testFromDurationPage.NewTime!, NewMember: testFromDurationPage.NewMember!)
         default:
             print("something went wrong")
         }

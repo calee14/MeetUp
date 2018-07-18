@@ -14,7 +14,16 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(incomingResults)
+    }
+    @IBAction func goBackTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        // 2
+        if let initialViewController = storyboard.instantiateInitialViewController() {
+            // 3
+            self.view.window?.rootViewController = initialViewController
+            // 4
+            self.view.window?.makeKeyAndVisible()
+        }
     }
     
 }

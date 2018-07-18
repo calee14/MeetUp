@@ -21,7 +21,7 @@ class CalendarViewController: UIViewController {
 //    var numOfMembers: Int! = 3
 //    var duration: Int!
     //accepting values from Main storyboard
-    var testFromDatePage = TestClass(NewTime: 0, NewMember: 3)
+    static var testFromDatePage: TestClass?
     //    to call the variables passed from main storyboard: testFromDatePage.NewTime/NewMember/NewDate
     
     static var currentNumOfMembers = 0
@@ -44,20 +44,13 @@ class CalendarViewController: UIViewController {
     }
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
         CalendarViewController.currentNumOfMembers += 1
-        print(CalendarViewController.currentNumOfMembers)
         UIViewController.userTimeData.append([AMSelectedCells, PMSelectedCells])
-        if CalendarViewController.currentNumOfMembers == testFromDatePage.NewMember {
-            print("Cool!")
+        if CalendarViewController.currentNumOfMembers == CalendarViewController.testFromDatePage?.NewMember {
             let storyboard = UIStoryboard(name: "Result", bundle: .main)
-            
-            // 2
             if let initialViewController = storyboard.instantiateInitialViewController() {
-                // 3
                 self.view.window?.rootViewController = initialViewController
-                // 4
                 self.view.window?.makeKeyAndVisible()
             }
-            //add next view onto stack
         }
         else {
             let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
