@@ -20,6 +20,7 @@
 		B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BD20FE520A00848B1B /* SetupViewController.swift */; };
 		B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */; };
 		B315B9C620FEA96000848B1B /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9C520FEA96000848B1B /* MemberViewController.swift */; };
+		B315B9CB20FFAFB300848B1B /* CalculateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9CA20FFAFB300848B1B /* CalculateTime.swift */; };
 		B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F37B7720FD143100E323A4 /* AppDelegate.swift */; };
 		B3F37B7D20FD143100E323A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F37B7B20FD143100E323A4 /* Main.storyboard */; };
 		B3F37B7F20FD143300E323A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F37B7E20FD143300E323A4 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		B315B9BD20FE520A00848B1B /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstion.swift"; sourceTree = "<group>"; };
 		B315B9C520FEA96000848B1B /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
+		B315B9CA20FFAFB300848B1B /* CalculateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTime.swift; sourceTree = "<group>"; };
 		B3F37B7420FD143100E323A4 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F37B7720FD143100E323A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F37B7C20FD143100E323A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		B315B9C920FFAF9D00848B1B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B315B9CA20FFAFB300848B1B /* CalculateTime.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B3F37B6B20FD143100E323A4 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 		B3F37B7620FD143100E323A4 /* MeetUp */ = {
 			isa = PBXGroup;
 			children = (
+				B315B9C920FFAF9D00848B1B /* Services */,
 				B3F37B7720FD143100E323A4 /* AppDelegate.swift */,
 				B315B9C420FEA91700848B1B /* ViewControllers */,
 				B315B9C320FEA90300848B1B /* Storyboards */,
@@ -213,6 +224,7 @@
 				B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */,
 				B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */,
 				B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */,
+				B315B9CB20FFAFB300848B1B /* CalculateTime.swift in Sources */,
 				B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */,
 				79330ED120FD38A600D72B2A /* DurationViewController.swift in Sources */,
 				798F734620FE6A0800253443 /* ResultViewController.swift in Sources */,

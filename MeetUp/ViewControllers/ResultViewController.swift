@@ -10,21 +10,11 @@ import Foundation
 import UIKit
 
 class ResultViewController: UIViewController {
-    var incomingResults = ResultClass(NewArray: [[0,0],[1,1],[2,2]])
+    weak var incomingResults = ResultClass(NewArray: [[0,0],[1,1],[2,2]])
     
     @IBOutlet weak var resetButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    @IBAction func goBackTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        // 2
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            // 3
-            self.view.window?.rootViewController = initialViewController
-            // 4
-            self.view.window?.makeKeyAndVisible()
-        }
     }
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         if let nvc = navigationController {

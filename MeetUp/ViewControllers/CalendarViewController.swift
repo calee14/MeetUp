@@ -46,11 +46,7 @@ class CalendarViewController: UIViewController {
         CalendarViewController.currentNumOfMembers += 1
         UIViewController.userTimeData.append([AMSelectedCells, PMSelectedCells])
         if CalendarViewController.currentNumOfMembers == CalendarViewController.testFromDatePage?.NewMember {
-            let storyboard = UIStoryboard(name: "Result", bundle: .main)
-            if let initialViewController = storyboard.instantiateInitialViewController() {
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
-            }
+            self.performSegue(withIdentifier: "donePlanning", sender: self)
         }
         else {
             let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
