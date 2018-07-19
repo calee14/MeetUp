@@ -84,10 +84,10 @@ class CalendarViewController: UIViewController {
         initialTouch = location
         if (location?.x)! < transparentView.frame.size.width / 2 {
             // left: touch is in the am table view
-            initialCellIsTouched = !checkIfCellTouched(for: amTableView, at: location!)
+            initialCellIsTouched = checkIfCellTouched(for: amTableView, at: location!)
         } else if (location?.x)! > transparentView.frame.size.width / 2 {
             // right: touch is in the pm table view
-            initialCellIsTouched = !checkIfCellTouched(for: pmTableView, at: location!)
+            initialCellIsTouched = checkIfCellTouched(for: pmTableView, at: location!)
         }
     }
     
@@ -133,7 +133,7 @@ class CalendarViewController: UIViewController {
             
             if initialTouch.y < location.y {
                 // the touch has moved below the initial touch
-                if cellY + cellHeight > initialTouch.y && cellY < location.y {
+                if cellY + (cellHeight/2) > initialTouch.y && cellY - (cellHeight/2) < location.y {
                     if cell.selectedTime != initialCellIsTouched {
                         if indexPath.row == 0 {
                             return
@@ -144,7 +144,7 @@ class CalendarViewController: UIViewController {
                 }
             } else if initialTouch.y > location.y {
                 // the touch has moved above the initial touch
-                if cellY - cellHeight < initialTouch.y && cellY > location.y {
+                if cellY + (cellHeight/2) < initialTouch.y && cellY - (cellHeight/2) > location.y {
                     if cell.selectedTime != initialCellIsTouched{
                         if indexPath.row == 0 {
                             return
@@ -168,7 +168,8 @@ class CalendarViewController: UIViewController {
     
     func checkIfCellTouched(for table: UITableView, at location: CGPoint) -> Bool {
         for cell in table.visibleCells {
-            guard let cell = cell as? CalendarTableViewCell  else { return false}
+            guard let cell = cell as? CalendarTableViewCell else { return false }
+            guard let indexPath = table.indexPath(for: cell) else { return false }
             
             let cellPosition = cell.layer.position
             let cellY = cellPosition.y
@@ -176,13 +177,21 @@ class CalendarViewController: UIViewController {
             let cellSize = cell.frame.size
             let cellHeight = cellSize.height
             
-            if cellY + cellHeight > location.y && cellY < location.y {
+            if cellY + (cellHeight/2) > location.y && cellY - (cellHeight/2) < location.y {
                 // if tap is in the cell
-                if cell.selectedTime {
+                if cell.selectedTime == false {
+                    if indexPath.row == 0 {
+                        return false
+                    }
                     cell.selectedTime = true
+                    updateTableView(for: table, indexPath: indexPath)
                     return true
-                } else if !cell.selectedTime {
+                } else if cell.selectedTime == true{
+                    if indexPath.row == 0 {
+                        return false
+                    }
                     cell.selectedTime = false
+                    updateTableView(for: table, indexPath: indexPath)
                     return false
                 }
             }
