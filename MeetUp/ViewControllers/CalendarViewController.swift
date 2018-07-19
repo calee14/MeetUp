@@ -22,8 +22,9 @@ class CalendarViewController: UIViewController {
     
     var AMSelectedCells = [Int: Bool]()
     var PMSelectedCells = [Int: Bool]()
-    
+    var touchSide: Side!
     var initialTouch: CGPoint!
+    
 //    var numOfMembers: Int! = 3
 //    var duration: Int!
     //accepting values from Main storyboard
@@ -84,12 +85,21 @@ class CalendarViewController: UIViewController {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: transparentView)
-        if initialTouch.x < transparentView.frame.size.width / 2 {
+        if (location?.x)! < transparentView.frame.size.width / 2 {
+            if !(touchSide == .right) {
+                initialTouch = location
+                touchSide = .right
+            }
             // left: touch is in the am table view
             checkIfCellTouched(for: amTableView, at: location!)
             
-        } else if initialTouch.x > transparentView.frame.size.width / 2 {
-            // right
+        } else if (location?.x)! > transparentView.frame.size.width / 2 {
+            if !(touchSide == .left) {
+                initialTouch = location
+                touchSide = .left
+            }
+            // right: touch is in the pm table view
+            checkIfCellTouched(for: pmTableView, at: location!)
         }
     }
     
@@ -104,7 +114,6 @@ class CalendarViewController: UIViewController {
             
             guard let indexPath = table.indexPath(for: cell) else { return }
             
-            
             let cellPosition = cell.layer.position
             let cellY = cellPosition.y
             
@@ -115,22 +124,35 @@ class CalendarViewController: UIViewController {
                 // the touch has moved below the initial touch
                 if cellY + cellHeight > initialTouch.y && cellY < location.y {
                     if !cell.selectedTime {
+                        if indexPath.row == 0 {
+                            return
+                        }
                         cell.selectedTime = true
-                        self.AMSelectedCells[indexPath.row - 1] = !self.AMSelectedCells[indexPath.row - 1]!
-                        table.reloadData()
+                        updateTableView(for: table, indexPath: indexPath)
                     }
                 }
             } else if initialTouch.y > location.y {
                 // the touch has moved above the initial touch
                 if cellY - cellHeight < initialTouch.y && cellY > location.y {
                     if !cell.selectedTime {
+                        if indexPath.row == 0 {
+                            return
+                        }
                         cell.selectedTime = true
-                        self.AMSelectedCells[indexPath.row - 1] = !self.AMSelectedCells[indexPath.row - 1]!
-                        table.reloadData()
+                        updateTableView(for: table, indexPath: indexPath)
                     }
                 }
             }
         }
+    }
+    
+    func updateTableView(for table: UITableView, indexPath: IndexPath) {
+        if table == amTableView {
+            self.AMSelectedCells[indexPath.row - 1] = !self.AMSelectedCells[indexPath.row - 1]!
+        } else if table == pmTableView {
+            self.PMSelectedCells[indexPath.row - 1] = !self.PMSelectedCells[indexPath.row - 1]!
+        }
+        table.reloadData()
     }
 }
 
