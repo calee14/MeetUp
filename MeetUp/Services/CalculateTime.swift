@@ -76,7 +76,7 @@ struct CalculateTime {
             individualWorkingValues=[]
         }
         
-        print(startingTimes)
+        print("Starting times: \(startingTimes)")
         //Compares all starting values and finds a common one
         
         var finalCheckArray = [String]()
@@ -106,7 +106,8 @@ struct CalculateTime {
             
         }
         
-     
+        print("Final solution array: \(finalSolution)")
+        
         var solutionArray = [String]()
         
         if finalSolution.count>0{
