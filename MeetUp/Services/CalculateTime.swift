@@ -21,16 +21,16 @@ struct CalculateTime {
 //            user3[i] = false
 //        }
         
-        var pickedDuration = pickedDuration
-        var pickedNumberOfPeople = pickedNumberOfPeople
+        var pickedDuration = CalendarViewController.testFromDatePage.NewTime
+        var pickedNumberOfPeople = CalendarViewController.testFromDatePage.NewMember
         var superDict: [[Int: Bool]] = superDict // [user1, user2, user3]
         
        
         var startingTimes=[[Int]]()
         var tempArray=[Int]()
         var checkArray = [String]()
-        var oneLessHour=pickedDuration-1
-        var oneLessPeople=pickedNumberOfPeople-1
+        var oneLessHour=pickedDuration!-1
+        var oneLessPeople=pickedNumberOfPeople!-1
         var individualWorkingValues=[Int]()
         var workingValues=[[Int]]()
         
@@ -42,10 +42,10 @@ struct CalculateTime {
                 }
             }
             workingValues.append(individualWorkingValues)
-            
             for cell in individualWorkingValues{
                 if pickedDuration == 1{
                     tempArray.append(cell)
+                    print(tempArray)
                 } else{
                     //for now it will run twice cause it's one through two
                     for firstIndex in 1...oneLessHour /* runs 2 times, onelesshour is 2 */ {
@@ -59,16 +59,15 @@ struct CalculateTime {
                             break
                         }
                         
+                        if checkArray.count == oneLessHour{
+                            tempArray.append(cell)
+                            checkArray=[]
+                            
+                        } else{
+                            checkArray=[]
+                        }
+                        
                     }
-                }
-                
-                
-                if checkArray.count == oneLessHour{
-                    tempArray.append(cell)
-                    checkArray=[]
-                    
-                } else{
-                    checkArray=[]
                 }
             }
             
@@ -77,36 +76,43 @@ struct CalculateTime {
             individualWorkingValues=[]
         }
         
+        print(startingTimes)
         //Compares all starting values and finds a common one
         
         var finalCheckArray = [String]()
         var finalSolution = [Int]()
         for value in startingTimes[0]{
-            for index in  0...oneLessPeople{
-                for eachCell in startingTimes[index]{
-                    if eachCell == value{
-                        finalCheckArray.append("yes")
-                    } else{
-                        continue
+            if pickedNumberOfPeople! == 1{
+                finalSolution.append(value)
+            } else{
+                for index in  1...oneLessPeople{
+                    for eachCell in startingTimes[index]{
+                        if eachCell == value{
+                            finalCheckArray.append("yes")
+                        } else{
+                            continue
+                        }
                     }
+                    
                 }
                 
+                if finalCheckArray.count == oneLessPeople{
+                    finalSolution.append(value)
+                    finalCheckArray=[]
+                } else{
+                    finalCheckArray=[]
+                }
             }
             
-            if finalCheckArray.count == pickedNumberOfPeople{
-                finalSolution.append(value)
-                finalCheckArray=[]
-            } else{
-                finalCheckArray=[]
-            }
         }
         
+     
         var solutionArray = [String]()
         
         if finalSolution.count>0{
             print("The following meeting times work for your group:")
             for finalTime in finalSolution{
-                var endingTime=finalTime+pickedDuration
+                var endingTime=finalTime+pickedDuration!
                 if finalTime==0{
                     var new=finalTime+12
                     if endingTime<12{

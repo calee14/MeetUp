@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-ZI-Y1V">
-                                <rect key="frame" x="20" y="587" width="335" height="60"/>
+                                <rect key="frame" x="20" y="547" width="335" height="60"/>
                                 <color key="backgroundColor" red="0.70980392156862748" green="1" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="PwI-M1-dcm"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meetly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-Jh-qhb">
-                                <rect key="frame" x="20" y="84" width="335" height="483"/>
+                                <rect key="frame" x="20" y="84" width="335" height="443"/>
                                 <color key="backgroundColor" red="0.44826502936199863" green="0.44826502936199863" blue="0.44826502936199863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="55"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,9 +48,9 @@
                             <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I3X-3K-axU"/>
                             <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="top" secondItem="DNH-Jh-qhb" secondAttribute="bottom" constant="20" id="QDP-Jx-1vV"/>
                             <constraint firstItem="DNH-Jh-qhb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RAr-DA-Lbb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gpx-ZI-Y1V" secondAttribute="bottom" constant="20" id="WFF-ze-WEK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gpx-ZI-Y1V" secondAttribute="trailing" constant="20" id="c4l-dI-LYt"/>
                             <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="top" secondItem="DNH-Jh-qhb" secondAttribute="bottom" constant="20" id="gaB-kw-82K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gpx-ZI-Y1V" secondAttribute="bottom" constant="60" id="iWW-k0-LwO"/>
                             <constraint firstItem="DNH-Jh-qhb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k4x-K1-lhS"/>
                             <constraint firstItem="DNH-Jh-qhb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rs4-sl-JAa"/>
                         </constraints>

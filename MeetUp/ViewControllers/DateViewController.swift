@@ -11,7 +11,7 @@ import UIKit
 
 class DateViewController: UIViewController {
     
-    var testFromDurationPage = TestClass(NewTime: 0, NewMember: 0)
+    var testFromDurationPage = TestClass(NewTime: 1, NewMember: 1)
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
