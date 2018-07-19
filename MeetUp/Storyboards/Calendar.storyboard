@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Set Up Hours-->
+        <!--Availablilty-->
         <scene sceneID="xFb-hG-OBk">
             <objects>
                 <viewController storyboardIdentifier="CalendarViewController" id="N3Q-Fg-JbO" customClass="CalendarViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,13 +121,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GFj-HG-7DY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Set Up Hours" id="qBs-eU-Rfs">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="B5j-Fh-na3">
+                    <navigationItem key="navigationItem" title="Availablilty" id="qBs-eU-Rfs">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="B5j-Fh-na3">
                             <connections>
                                 <action selector="backButtonTapped:" destination="N3Q-Fg-JbO" id="bbH-C2-Iy5"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next User" id="Cmf-fL-ktl">
+                        <barButtonItem key="rightBarButtonItem" title="Next Person" id="Cmf-fL-ktl">
                             <connections>
                                 <action selector="nextButtonTapped:" destination="N3Q-Fg-JbO" id="ze3-lh-Wv7"/>
                             </connections>
