@@ -100,6 +100,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGZ-7G-fX7">
+                                <rect key="frame" x="1" y="125" width="374" height="543"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -134,6 +139,7 @@
                         <outlet property="dateLabel" destination="NXg-6M-fJg" id="TdB-LZ-iSj"/>
                         <outlet property="nextButton" destination="Cmf-fL-ktl" id="Dg0-zU-Kh8"/>
                         <outlet property="pmTableView" destination="nhL-Ya-Tp4" id="TOe-up-st6"/>
+                        <outlet property="transparentView" destination="lGZ-7G-fX7" id="eIw-zm-dVH"/>
                         <segue destination="tnh-q3-4Pp" kind="show" identifier="donePlanning" id="B47-Tu-vva"/>
                     </connections>
                 </viewController>

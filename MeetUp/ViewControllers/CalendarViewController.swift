@@ -15,6 +15,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var transparentView: UIView!
     
     var AMSelectedCells = [Int: Bool]()
     var PMSelectedCells = [Int: Bool]()
