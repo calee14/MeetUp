@@ -8,6 +8,9 @@
 
 import UIKit
 
+enum Side {
+    case left, right 
+}
 class CalendarViewController: UIViewController {
 
     @IBOutlet weak var amTableView: UITableView!
@@ -20,6 +23,7 @@ class CalendarViewController: UIViewController {
     var AMSelectedCells = [Int: Bool]()
     var PMSelectedCells = [Int: Bool]()
     
+    var initialTouch: CGPoint!
 //    var numOfMembers: Int! = 3
 //    var duration: Int!
     //accepting values from Main storyboard
@@ -60,6 +64,7 @@ class CalendarViewController: UIViewController {
             self.navigationController?.pushViewController(nextCalendar, animated: true)
         }
     }
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         CalendarViewController.currentNumOfMembers -= 1
         if !UIViewController.userTimeData.isEmpty {
@@ -69,6 +74,64 @@ class CalendarViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        let location = touch?.location(in: transparentView)
+        initialTouch = location
+        print(location)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        let location = touch?.location(in: transparentView)
+        if initialTouch.x < transparentView.frame.size.width / 2 {
+            // left: touch is in the am table view
+            checkIfCellTouched(for: amTableView, at: location!)
+            
+        } else if initialTouch.x > transparentView.frame.size.width / 2 {
+            // right
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        let location = touch?.location(in: transparentView)
+    }
+    
+    func checkIfCellTouched(for table: UITableView, at location: CGPoint) {
+        for cell in table.visibleCells {
+            guard let cell = cell as? CalendarTableViewCell else { return }
+            
+            guard let indexPath = table.indexPath(for: cell) else { return }
+            
+            
+            let cellPosition = cell.layer.position
+            let cellY = cellPosition.y
+            
+            let cellSize = cell.frame.size
+            let cellHeight = cellSize.height
+            
+            if initialTouch.y < location.y {
+                // the touch has moved below the initial touch
+                if cellY + cellHeight > initialTouch.y && cellY < location.y {
+                    if !cell.selectedTime {
+                        cell.selectedTime = true
+                        self.AMSelectedCells[indexPath.row - 1] = !self.AMSelectedCells[indexPath.row - 1]!
+                        table.reloadData()
+                    }
+                }
+            } else if initialTouch.y > location.y {
+                // the touch has moved above the initial touch
+                if cellY - cellHeight < initialTouch.y && cellY > location.y {
+                    if !cell.selectedTime {
+                        cell.selectedTime = true
+                        self.AMSelectedCells[indexPath.row - 1] = !self.AMSelectedCells[indexPath.row - 1]!
+                        table.reloadData()
+                    }
+                }
+            }
+        }
+    }
 }
 
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {

@@ -18,7 +18,7 @@
 		B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B520FD346700848B1B /* CalendarViewController.swift */; };
 		B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */; };
 		B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BD20FE520A00848B1B /* SetupViewController.swift */; };
-		B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */; };
+		B315B9C020FE67E700848B1B /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9BF20FE67E700848B1B /* UIViewController+Extentions.swift */; };
 		B315B9C620FEA96000848B1B /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9C520FEA96000848B1B /* MemberViewController.swift */; };
 		B315B9CB20FFAFB300848B1B /* CalculateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B315B9CA20FFAFB300848B1B /* CalculateTime.swift */; };
 		B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F37B7720FD143100E323A4 /* AppDelegate.swift */; };
@@ -39,7 +39,7 @@
 		B315B9B520FD346700848B1B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
 		B315B9BD20FE520A00848B1B /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
-		B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extenstion.swift"; sourceTree = "<group>"; };
+		B315B9BF20FE67E700848B1B /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
 		B315B9C520FEA96000848B1B /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 		B315B9CA20FFAFB300848B1B /* CalculateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTime.swift; sourceTree = "<group>"; };
 		B3F37B7420FD143100E323A4 /* MeetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +89,7 @@
 		B315B9C720FEA97A00848B1B /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				B315B9BF20FE67E700848B1B /* UIViewController+Extenstion.swift */,
+				B315B9BF20FE67E700848B1B /* UIViewController+Extentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 				B315B9C620FEA96000848B1B /* MemberViewController.swift in Sources */,
 				B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */,
 				B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */,
-				B315B9C020FE67E700848B1B /* UIViewController+Extenstion.swift in Sources */,
+				B315B9C020FE67E700848B1B /* UIViewController+Extentions.swift in Sources */,
 				B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */,
 				B315B9CB20FFAFB300848B1B /* CalculateTime.swift in Sources */,
 				B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */,
