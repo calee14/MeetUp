@@ -41,7 +41,7 @@ struct CalculateTime {
         }
         
         for i in 0...23{
-            for j in 0...pickedDuration {
+            for j in 0...pickedDuration-1 {
                 if i+j < 24 {
                     startingTimesTotalCount[i] = startingTimesTotalCount[i]! + availableTimesCount[i+j]!
                 }
@@ -49,6 +49,7 @@ struct CalculateTime {
         }
         
         var sortedKeys = startingTimesTotalCount.sorted(by: { $0.value > $1.value })
+        print("Sorted keys: \(sortedKeys)")
         let maxVal = sortedKeys[0].value
         for tuple in sortedKeys {
             if tuple.value == maxVal {
