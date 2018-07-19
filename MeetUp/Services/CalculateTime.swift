@@ -10,112 +10,65 @@ import Foundation
 import UIKit
 
 struct CalculateTime {
-    static func calculate(superDict: [[Int : Bool]], pickedDuration: Int, pickedNumberOfPeople: Int) -> String {
-//        var user1 = [Int: Bool]()
-//        var user2 = [Int: Bool]()
-//        var user3 = [Int: Bool]()
-//
-//        for i in 0...23 {
-//            user1[i] = false
-//            user2[i] = false
-//            user3[i] = false
-//        }
+    static func calculate() -> String {
         
-        var pickedDuration = CalendarViewController.testFromDatePage.NewTime
-        var pickedNumberOfPeople = CalendarViewController.testFromDatePage.NewMember
-        var superDict: [[Int: Bool]] = superDict // [user1, user2, user3]
+        let pickedDuration = CalendarViewController.testFromDatePage.NewTime!
+        let pickedNumberOfPeople = CalendarViewController.testFromDatePage.NewMember!
+        let superDict: [[Int: Bool]] = CalculateTime.changeTimeDataType()
         
-       
-        var startingTimes=[[Int]]()
-        var tempArray=[Int]()
-        var checkArray = [String]()
-        var oneLessHour=pickedDuration!-1
-        var oneLessPeople=pickedNumberOfPeople!-1
-        var individualWorkingValues=[Int]()
-        var workingValues=[[Int]]()
+        var availableTimesCount = [Int: Int]()
         
+        for i in 0...23 {
+            availableTimesCount[i] = 0
+        }
         
-        for index in 0...oneLessPeople /*for each of the people*/{
+        for index in 0...pickedNumberOfPeople - 1 {
             for i in 0...23{
                 if superDict[index][i]!{
-                    individualWorkingValues.append(i)
+                    availableTimesCount[i] = availableTimesCount[i]! + 1
                 }
             }
-            workingValues.append(individualWorkingValues)
-            for cell in individualWorkingValues{
-                if pickedDuration == 1{
-                    tempArray.append(cell)
-                    print(tempArray)
-                } else{
-                    //for now it will run twice cause it's one through two
-                    for firstIndex in 1...oneLessHour /* runs 2 times, onelesshour is 2 */ {
-                        var nextValue=cell+firstIndex
-                        
-                        if individualWorkingValues.contains(nextValue){
-                            checkArray.append("yes")
-                            
-                        } else{
-                            checkArray=[]
-                            break
-                        }
-                        
-                        if checkArray.count == oneLessHour{
-                            tempArray.append(cell)
-                            checkArray=[]
-                            
-                        } else{
-                            checkArray=[]
-                        }
-                        
-                    }
-                }
-            }
-            
-            startingTimes.append(tempArray)
-            tempArray=[]
-            individualWorkingValues=[]
         }
         
-        print("Starting times: \(startingTimes)")
+        print("Starting times: \(availableTimesCount)")
         //Compares all starting values and finds a common one
         
-        var finalCheckArray = [String]()
-        var finalSolution = [Int]()
-        for value in startingTimes[0]{
-            if pickedNumberOfPeople! == 1{
-                finalSolution.append(value)
-            } else{
-                for index in  1...oneLessPeople{
-                    for eachCell in startingTimes[index]{
-                        if eachCell == value{
-                            finalCheckArray.append("yes")
-                        } else{
-                            continue
-                        }
-                    }
-                    
-                }
-                
-                if finalCheckArray.count == oneLessPeople{
-                    finalSolution.append(value)
-                    finalCheckArray=[]
-                } else{
-                    finalCheckArray=[]
-                }
-            }
-            
+        var startingTimesTotalCount = [Int: Int]()
+        var finalAnswer = [Int]()
+        
+        for i in 0...23 {
+            startingTimesTotalCount[i] = 0
         }
         
-        print("Final solution array: \(finalSolution)")
+        for i in 0...23{
+            for j in 0...pickedDuration {
+                if i+j < 24 {
+                    startingTimesTotalCount[i] = startingTimesTotalCount[i]! + availableTimesCount[i+j]!
+                }
+            }
+        }
+        
+        var sortedKeys = startingTimesTotalCount.sorted(by: { $0.value > $1.value })
+        let maxVal = sortedKeys[0].value
+        for tuple in sortedKeys {
+            if tuple.value == maxVal {
+                finalAnswer.append(tuple.key)
+            }
+        }
+        
+        
+        //Everything beyond here seems to be formatting
+        
+        print("Final solution array: \(finalAnswer)")
         
         var solutionArray = [String]()
         
-        if finalSolution.count>0{
+        if finalAnswer.count>0{
             print("The following meeting times work for your group:")
-            for finalTime in finalSolution{
-                var endingTime=finalTime+pickedDuration!
+            for finalTime in finalAnswer{
+                var endingTime=finalTime+pickedDuration
                 if finalTime==0{
-                    var new=finalTime+12
+                    let new=finalTime+12
                     if endingTime<12{
                         print("\(String(new)):00 AM to \(String(endingTime)):00 AM")
                         solutionArray.append("\(String(new)):00 AM to \(String(endingTime)):00 AM")
@@ -171,7 +124,7 @@ struct CalculateTime {
                 }
                     
                 else if finalTime>12{
-                    var newFinalTime=finalTime-12
+                    let newFinalTime=finalTime-12
                     if endingTime==24{
                         endingTime-=12
                         print("\(String(newFinalTime)):00 PM to \(String(endingTime)):00 AM")

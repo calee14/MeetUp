@@ -31,6 +31,7 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        transparentView.isUserInteractionEnabled = false
         // Do any additional setup after loading the view.
 //        print(CalendarViewController.testFromDatePage.NewDate)
         dateLabel.text = CalendarViewController.testFromDatePage.NewDate
