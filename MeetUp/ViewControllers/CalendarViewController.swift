@@ -84,10 +84,10 @@ class CalendarViewController: UIViewController {
         initialTouch = location
         if (location?.x)! < transparentView.frame.size.width / 2 {
             // left: touch is in the am table view
-            initialCellIsTouched = checkIfCellTouched(for: amTableView, at: location!)
+            initialCellIsTouched = !checkIfCellTouched(for: amTableView, at: location!)
         } else if (location?.x)! > transparentView.frame.size.width / 2 {
             // right: touch is in the pm table view
-            initialCellIsTouched = checkIfCellTouched(for: pmTableView, at: location!)
+            initialCellIsTouched = !checkIfCellTouched(for: pmTableView, at: location!)
         }
     }
     
@@ -134,22 +134,22 @@ class CalendarViewController: UIViewController {
             if initialTouch.y < location.y {
                 // the touch has moved below the initial touch
                 if cellY + cellHeight > initialTouch.y && cellY < location.y {
-                    if !cell.selectedTime {
+                    if cell.selectedTime != initialCellIsTouched {
                         if indexPath.row == 0 {
                             return
                         }
-                        cell.selectedTime = true
+                        cell.selectedTime = initialCellIsTouched
                         updateTableView(for: table, indexPath: indexPath)
                     }
                 }
             } else if initialTouch.y > location.y {
                 // the touch has moved above the initial touch
                 if cellY - cellHeight < initialTouch.y && cellY > location.y {
-                    if !cell.selectedTime {
+                    if cell.selectedTime != initialCellIsTouched{
                         if indexPath.row == 0 {
                             return
                         }
-                        cell.selectedTime = true
+                        cell.selectedTime = initialCellIsTouched
                         updateTableView(for: table, indexPath: indexPath)
                     }
                 }
@@ -179,8 +179,10 @@ class CalendarViewController: UIViewController {
             if cellY + cellHeight > location.y && cellY < location.y {
                 // if tap is in the cell
                 if cell.selectedTime {
+                    cell.selectedTime = true
                     return true
                 } else if !cell.selectedTime {
+                    cell.selectedTime = false
                     return false
                 }
             }
