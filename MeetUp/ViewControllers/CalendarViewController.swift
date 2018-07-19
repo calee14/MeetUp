@@ -24,6 +24,7 @@ class CalendarViewController: UIViewController {
     var PMSelectedCells = [Int: Bool]()
     var touchSide: Side!
     var initialTouch: CGPoint!
+    var initialCellIsTouched: Bool!
     
 //    var numOfMembers: Int! = 3
 //    var duration: Int!
@@ -75,11 +76,19 @@ class CalendarViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // MARK: - Overrided functions for touch recognition
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
         let location = touch?.location(in: transparentView)
         initialTouch = location
-        print(location)
+        if (location?.x)! < transparentView.frame.size.width / 2 {
+            // left: touch is in the am table view
+            initialCellIsTouched = checkIfCellTouched(for: amTableView, at: location!)
+        } else if (location?.x)! > transparentView.frame.size.width / 2 {
+            // right: touch is in the pm table view
+            initialCellIsTouched = checkIfCellTouched(for: pmTableView, at: location!)
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -91,7 +100,7 @@ class CalendarViewController: UIViewController {
                 touchSide = .right
             }
             // left: touch is in the am table view
-            checkIfCellTouched(for: amTableView, at: location!)
+            checkIfCellHasBeenHighlighted(for: amTableView, at: location!)
             
         } else if (location?.x)! > transparentView.frame.size.width / 2 {
             if !(touchSide == .left) {
@@ -99,7 +108,7 @@ class CalendarViewController: UIViewController {
                 touchSide = .left
             }
             // right: touch is in the pm table view
-            checkIfCellTouched(for: pmTableView, at: location!)
+            checkIfCellHasBeenHighlighted(for: pmTableView, at: location!)
         }
     }
     
@@ -108,7 +117,9 @@ class CalendarViewController: UIViewController {
         let location = touch?.location(in: transparentView)
     }
     
-    func checkIfCellTouched(for table: UITableView, at location: CGPoint) {
+    // MARK: - Functions to check touches
+    
+    func checkIfCellHasBeenHighlighted(for table: UITableView, at location: CGPoint) {
         for cell in table.visibleCells {
             guard let cell = cell as? CalendarTableViewCell else { return }
             
@@ -153,6 +164,28 @@ class CalendarViewController: UIViewController {
             self.PMSelectedCells[indexPath.row - 1] = !self.PMSelectedCells[indexPath.row - 1]!
         }
         table.reloadData()
+    }
+    
+    func checkIfCellTouched(for table: UITableView, at location: CGPoint) -> Bool {
+        for cell in table.visibleCells {
+            guard let cell = cell as? CalendarTableViewCell  else { return false}
+            
+            let cellPosition = cell.layer.position
+            let cellY = cellPosition.y
+            
+            let cellSize = cell.frame.size
+            let cellHeight = cellSize.height
+            
+            if cellY + cellHeight > location.y && cellY < location.y {
+                // if tap is in the cell
+                if cell.selectedTime {
+                    return true
+                } else if !cell.selectedTime {
+                    return false
+                }
+            }
+        }
+        return false
     }
 }
 
