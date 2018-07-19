@@ -146,8 +146,12 @@ struct CalculateTime {
             solutionArray.append("No meeting times work for your group")
         }
         
-        return solutionArray[Int(arc4random_uniform(UInt32(solutionArray.count)))]
-        
+        if maxVal == pickedDuration * pickedNumberOfPeople {
+            return solutionArray[Int(arc4random_uniform(UInt32(solutionArray.count)))]
+        }
+        else {
+            return (solutionArray[Int(arc4random_uniform(UInt32(solutionArray.count)))] + ". WARNING: Not everyone can make this time.")
+        }
     }
     
     static func changeTimeDataType() -> [[Int: Bool]] {
