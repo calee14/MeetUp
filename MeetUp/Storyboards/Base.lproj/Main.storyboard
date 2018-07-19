@@ -24,8 +24,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="PwI-M1-dcm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <state key="normal" title="Set up new meeting">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <state key="normal" title="Click to set up new meeting">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" red="0.81960784313725488" green="1" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -33,26 +33,72 @@
                                     <segue destination="6Fl-9x-QqF" kind="show" id="m1U-zz-z9l"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meetly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-Jh-qhb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHF-ff-V2d">
                                 <rect key="frame" x="20" y="84" width="335" height="443"/>
-                                <color key="backgroundColor" red="0.44826502936199863" green="0.44826502936199863" blue="0.44826502936199863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="55"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="MMa-bZ-2zn">
+                                        <rect key="frame" x="40" y="128" width="255" height="187.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meetly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-Jh-qhb">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="66"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="55"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group members select their available hours on a pre-chosen meeting date. App calculates possible meeting times!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-KU-sdG">
+                                                <rect key="frame" x="0.0" y="106" width="255" height="81.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                <color key="textColor" red="0.87183913678128666" green="0.86762735351181186" blue="0.87605092005076146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hje-eL-9ZQ">
+                                        <rect key="frame" x="100" y="355.5" width="135" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="User Tutorial">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="D3N-r5-AL0" kind="show" id="j43-EL-ocG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hje-eL-9ZQ" secondAttribute="trailing" constant="100" id="1Hf-ri-yxx"/>
+                                    <constraint firstItem="MMa-bZ-2zn" firstAttribute="centerX" secondItem="vHF-ff-V2d" secondAttribute="centerX" id="EMg-Ew-tGs"/>
+                                    <constraint firstItem="MMa-bZ-2zn" firstAttribute="leading" secondItem="vHF-ff-V2d" secondAttribute="leading" constant="40" id="L3k-Xt-N3Z"/>
+                                    <constraint firstItem="MMa-bZ-2zn" firstAttribute="centerY" secondItem="vHF-ff-V2d" secondAttribute="centerY" id="V8n-WU-tbY"/>
+                                    <constraint firstItem="hje-eL-9ZQ" firstAttribute="leading" secondItem="vHF-ff-V2d" secondAttribute="leading" constant="100" id="jZt-3i-5hm"/>
+                                    <constraint firstItem="hje-eL-9ZQ" firstAttribute="top" secondItem="MMa-bZ-2zn" secondAttribute="bottom" constant="40" id="mmm-Mi-RVz"/>
+                                    <constraint firstAttribute="trailing" secondItem="MMa-bZ-2zn" secondAttribute="trailing" constant="40" id="pk0-Lx-fB3"/>
+                                    <constraint firstItem="hje-eL-9ZQ" firstAttribute="centerX" secondItem="vHF-ff-V2d" secondAttribute="centerX" id="uQy-ni-hFf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.23581592229131193" green="0.26478823153844011" blue="0.26853888287548511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DNH-Jh-qhb" secondAttribute="trailing" constant="20" id="1Fk-fw-jWf"/>
                             <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8yx-eh-pVr"/>
                             <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="I3X-3K-axU"/>
-                            <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="top" secondItem="DNH-Jh-qhb" secondAttribute="bottom" constant="20" id="QDP-Jx-1vV"/>
-                            <constraint firstItem="DNH-Jh-qhb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RAr-DA-Lbb"/>
+                            <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="top" secondItem="vHF-ff-V2d" secondAttribute="bottom" constant="20" id="RIv-HB-uP9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gpx-ZI-Y1V" secondAttribute="trailing" constant="20" id="c4l-dI-LYt"/>
-                            <constraint firstItem="Gpx-ZI-Y1V" firstAttribute="top" secondItem="DNH-Jh-qhb" secondAttribute="bottom" constant="20" id="gaB-kw-82K"/>
+                            <constraint firstItem="vHF-ff-V2d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="f9x-Gt-NtK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vHF-ff-V2d" secondAttribute="trailing" constant="20" id="fII-nn-Xo5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gpx-ZI-Y1V" secondAttribute="bottom" constant="60" id="iWW-k0-LwO"/>
-                            <constraint firstItem="DNH-Jh-qhb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k4x-K1-lhS"/>
-                            <constraint firstItem="DNH-Jh-qhb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rs4-sl-JAa"/>
+                            <constraint firstItem="vHF-ff-V2d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mw0-mG-5tD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -64,6 +110,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.2" y="133.5832083958021"/>
+        </scene>
+        <!--Step One-->
+        <scene sceneID="YK7-q7-4C6">
+            <objects>
+                <viewController id="D3N-r5-AL0" customClass="TutorialViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2q-c7-E29">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64e-ec-hVi">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Set up meeting logistics (Number of people, duration, and date)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQO-20-6c8">
+                                        <rect key="frame" x="20" y="20" width="295" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="8Pl-1X-oqF"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="PrG-nt-CDW"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="w7L-yR-Jl6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" red="0.1529411765" green="0.63921568630000003" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorialpage1" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-Bu-81a">
+                                        <rect key="frame" x="10" y="120" width="315" height="433"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mzb-Bu-81a" secondAttribute="bottom" constant="10" id="5NH-2g-I8i"/>
+                                    <constraint firstAttribute="trailing" secondItem="GQO-20-6c8" secondAttribute="trailing" constant="20" id="5Na-cI-7iv"/>
+                                    <constraint firstAttribute="trailing" secondItem="mzb-Bu-81a" secondAttribute="trailing" constant="10" id="QV3-Pc-xO8"/>
+                                    <constraint firstItem="mzb-Bu-81a" firstAttribute="leading" secondItem="64e-ec-hVi" secondAttribute="leading" constant="10" id="UDV-GQ-9NM"/>
+                                    <constraint firstItem="mzb-Bu-81a" firstAttribute="top" secondItem="GQO-20-6c8" secondAttribute="bottom" constant="10" id="fuF-Yo-jqT"/>
+                                    <constraint firstItem="GQO-20-6c8" firstAttribute="top" secondItem="64e-ec-hVi" secondAttribute="top" constant="20" id="o9q-LL-7hC"/>
+                                    <constraint firstItem="GQO-20-6c8" firstAttribute="leading" secondItem="64e-ec-hVi" secondAttribute="leading" constant="20" id="zTJ-ta-ooe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W1M-du-Q90" firstAttribute="bottom" secondItem="64e-ec-hVi" secondAttribute="bottom" constant="20" id="1ee-np-XXD"/>
+                            <constraint firstItem="64e-ec-hVi" firstAttribute="top" secondItem="W1M-du-Q90" secondAttribute="top" constant="20" id="Er8-X3-fJV"/>
+                            <constraint firstItem="64e-ec-hVi" firstAttribute="leading" secondItem="W1M-du-Q90" secondAttribute="leading" constant="20" id="XIe-id-c5o"/>
+                            <constraint firstItem="W1M-du-Q90" firstAttribute="trailing" secondItem="64e-ec-hVi" secondAttribute="trailing" constant="20" id="jQ1-QJ-RR8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W1M-du-Q90"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step One" id="Fum-4H-Bt4">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="sfs-E1-Dub">
+                            <connections>
+                                <segue destination="9Tg-Tn-c6k" kind="unwind" identifier="back" unwindAction="unwindWithTutorial:" id="0au-I5-kVa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="SvQ-x0-ueG">
+                            <connections>
+                                <segue destination="qBi-rG-bca" kind="show" id="hps-nn-Czf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8q-DP-KXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9Tg-Tn-c6k" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1488.8" y="919.79010494752629"/>
         </scene>
         <!--Member-->
         <scene sceneID="bvp-zb-Lta">
@@ -79,9 +190,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TTD-Fm-mEI">
                                         <rect key="frame" x="10" y="30" width="315" height="503"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people are joining this event?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXu-2V-Bfg">
-                                                <rect key="frame" x="21.5" y="0.0" width="272.5" height="246.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people are joining this meeting?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXu-2V-Bfg">
+                                                <rect key="frame" x="18" y="0.0" width="279.5" height="246.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                 <color key="textColor" red="0.15294117647058825" green="0.63921568627450975" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -155,7 +266,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long is the meeting going to last?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-D1-qz8">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="256.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                 <color key="textColor" red="0.1529411765" green="0.63921568630000003" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -246,7 +357,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On what date do you want to meet up?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-EL-Shc">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="256.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                 <color key="textColor" red="0.1529411765" green="0.63921568630000003" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -316,5 +427,150 @@
             </objects>
             <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RC9-ax-QyM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nxU-dL-MtI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3h0-0o-BmR">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D3N-r5-AL0" kind="relationship" relationship="rootViewController" id="2rK-Pc-pcw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnn-0v-ksd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="920"/>
+        </scene>
+        <!--Step Two-->
+        <scene sceneID="tMR-Bp-xc7">
+            <objects>
+                <viewController id="qBi-rG-bca" customClass="TutorialViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZF-bE-C5k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVA-gV-7Os">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Two: Each group member selects their available hours on the pre-chosen meeting date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbK-VW-Ejm">
+                                        <rect key="frame" x="20" y="20" width="295" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="2KQ-7z-yvl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" red="0.1529411765" green="0.63921568630000003" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQj-tO-zjD">
+                                        <rect key="frame" x="20" y="112" width="295" height="431"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UbK-VW-Ejm" firstAttribute="leading" secondItem="RVA-gV-7Os" secondAttribute="leading" constant="20" id="5gi-Ce-zZk"/>
+                                    <constraint firstAttribute="trailing" secondItem="pQj-tO-zjD" secondAttribute="trailing" constant="20" id="9lE-HD-IwI"/>
+                                    <constraint firstAttribute="bottom" secondItem="pQj-tO-zjD" secondAttribute="bottom" constant="20" id="J5c-7d-SYJ"/>
+                                    <constraint firstItem="UbK-VW-Ejm" firstAttribute="leading" secondItem="RVA-gV-7Os" secondAttribute="leading" constant="20" id="RbM-nN-ovq"/>
+                                    <constraint firstAttribute="trailing" secondItem="UbK-VW-Ejm" secondAttribute="trailing" constant="20" id="S6E-hs-IvY"/>
+                                    <constraint firstItem="UbK-VW-Ejm" firstAttribute="top" secondItem="RVA-gV-7Os" secondAttribute="top" constant="20" id="gQw-PV-Wx8"/>
+                                    <constraint firstAttribute="trailing" secondItem="UbK-VW-Ejm" secondAttribute="trailing" constant="20" id="j45-U2-Cri"/>
+                                    <constraint firstItem="pQj-tO-zjD" firstAttribute="top" secondItem="UbK-VW-Ejm" secondAttribute="bottom" constant="20" id="m9T-1O-Tm8"/>
+                                    <constraint firstItem="pQj-tO-zjD" firstAttribute="leading" secondItem="RVA-gV-7Os" secondAttribute="leading" constant="20" id="mPy-Vq-wWn"/>
+                                    <constraint firstItem="UbK-VW-Ejm" firstAttribute="top" secondItem="RVA-gV-7Os" secondAttribute="top" constant="20" id="xjj-5m-dWS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RVA-gV-7Os" firstAttribute="top" secondItem="Sy0-26-sSx" secondAttribute="top" constant="20" id="8yJ-Ei-iHr"/>
+                            <constraint firstItem="Sy0-26-sSx" firstAttribute="trailing" secondItem="RVA-gV-7Os" secondAttribute="trailing" constant="20" id="AYZ-MN-f6b"/>
+                            <constraint firstItem="Sy0-26-sSx" firstAttribute="bottom" secondItem="RVA-gV-7Os" secondAttribute="bottom" constant="20" id="MAn-Xw-Em2"/>
+                            <constraint firstItem="RVA-gV-7Os" firstAttribute="leading" secondItem="Sy0-26-sSx" secondAttribute="leading" constant="20" id="Zjw-Qc-efD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sy0-26-sSx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step Two" id="YOC-yu-FEs">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="21v-fO-gnn">
+                            <connections>
+                                <segue destination="MUz-kg-8AH" kind="show" id="KNY-x9-eNI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQy-u7-TmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2192.8000000000002" y="919.79010494752629"/>
+        </scene>
+        <!--Step Three-->
+        <scene sceneID="xsW-g2-Vze">
+            <objects>
+                <viewController id="MUz-kg-8AH" customClass="TutorialViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgQ-Ox-8pq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nj-vk-swN">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Three: View available meeting times!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21B-Dy-X2E">
+                                        <rect key="frame" x="20" y="20" width="295" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="MRn-az-346"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" red="0.1529411765" green="0.63921568630000003" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uho-CS-EKM">
+                                        <rect key="frame" x="20" y="88" width="295" height="455"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="21B-Dy-X2E" firstAttribute="leading" secondItem="0nj-vk-swN" secondAttribute="leading" constant="20" id="3Hi-NH-KlY"/>
+                                    <constraint firstItem="Uho-CS-EKM" firstAttribute="leading" secondItem="0nj-vk-swN" secondAttribute="leading" constant="20" id="GUV-qH-vwq"/>
+                                    <constraint firstItem="21B-Dy-X2E" firstAttribute="leading" secondItem="0nj-vk-swN" secondAttribute="leading" constant="20" id="LDL-tb-f8E"/>
+                                    <constraint firstAttribute="trailing" secondItem="21B-Dy-X2E" secondAttribute="trailing" constant="20" id="LhX-4L-6ag"/>
+                                    <constraint firstAttribute="trailing" secondItem="21B-Dy-X2E" secondAttribute="trailing" constant="20" id="Rf0-pc-YSH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uho-CS-EKM" secondAttribute="bottom" constant="20" id="S8n-bm-CJv"/>
+                                    <constraint firstItem="21B-Dy-X2E" firstAttribute="top" secondItem="0nj-vk-swN" secondAttribute="top" constant="20" id="UhJ-9T-AjQ"/>
+                                    <constraint firstItem="21B-Dy-X2E" firstAttribute="top" secondItem="0nj-vk-swN" secondAttribute="top" constant="20" id="ftE-Rk-sV0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uho-CS-EKM" secondAttribute="trailing" constant="20" id="ldR-2O-oDW"/>
+                                    <constraint firstItem="Uho-CS-EKM" firstAttribute="top" secondItem="21B-Dy-X2E" secondAttribute="bottom" constant="20" id="luB-Ow-Wec"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yc8-Yd-wqD" firstAttribute="trailing" secondItem="0nj-vk-swN" secondAttribute="trailing" constant="20" id="AJb-Iw-TYn"/>
+                            <constraint firstItem="0nj-vk-swN" firstAttribute="leading" secondItem="Yc8-Yd-wqD" secondAttribute="leading" constant="20" id="Iig-Xg-oLH"/>
+                            <constraint firstItem="0nj-vk-swN" firstAttribute="top" secondItem="Yc8-Yd-wqD" secondAttribute="top" constant="20" id="KqS-t3-Hzn"/>
+                            <constraint firstItem="Yc8-Yd-wqD" firstAttribute="bottom" secondItem="0nj-vk-swN" secondAttribute="bottom" constant="20" id="czR-N7-Qzd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yc8-Yd-wqD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step Three" id="wcE-Og-seC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jrI-QF-0DI">
+                            <connections>
+                                <segue destination="K7U-Fn-edE" kind="unwind" unwindAction="unwindWithTutorial:" id="axp-a6-gnG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hCM-Nr-ACE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="K7U-Fn-edE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2957.5999999999999" y="919.79010494752629"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="tutorialpage1" width="873" height="1078"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="j43-EL-ocG"/>
+    </inferredMetricsTieBreakers>
 </document>
