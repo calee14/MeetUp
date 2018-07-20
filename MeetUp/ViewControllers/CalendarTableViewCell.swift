@@ -18,11 +18,14 @@ class CalendarTableViewCell: UITableViewCell {
     
     var topTime: String = "" {
         didSet {
+            topTimeLabel.textColor=UIColor.white
             topTimeLabel.text = topTime
+            
         }
     }
     var bottomTime: String = "" {
         didSet {
+            bottomTimeLabel.textColor=UIColor.white
             bottomTimeLabel.text = bottomTime
         }
     }
@@ -37,20 +40,24 @@ class CalendarTableViewCell: UITableViewCell {
         contentView.addSubview(topTimeLabel)
         contentView.addSubview(bottomTimeLabel)
         contentView.addSubview(separatorLine)
-        contentView.addSubview(topSeperatorLine)
         
+//        contentView.addSubview(topSeperatorLine)
+        
+        
+        topTimeLabel.adjustsFontSizeToFitWidth = true
+        bottomTimeLabel.adjustsFontSizeToFitWidth = true
         topTimeLabel.textColor = UIColor.gray
         topTimeLabel.textAlignment = .right
         bottomTimeLabel.textColor = UIColor.gray
         bottomTimeLabel.textAlignment = .right
         separatorLine.backgroundColor = UIColor.gray
-        topSeperatorLine.backgroundColor = UIColor.gray
+//        topSeperatorLine.backgroundColor = UIColor.gray
         
         
         bottomTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         topTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         separatorLine.translatesAutoresizingMaskIntoConstraints = false
-        topSeperatorLine.translatesAutoresizingMaskIntoConstraints = false
+//        topSeperatorLine.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             bottomTimeLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
@@ -63,10 +70,10 @@ class CalendarTableViewCell: UITableViewCell {
             separatorLine.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             separatorLine.heightAnchor.constraint(equalToConstant: 1),
             separatorLine.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
-            topSeperatorLine.leftAnchor.constraint(equalTo: bottomTimeLabel.rightAnchor, constant: 8),
-            topSeperatorLine.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
-            topSeperatorLine.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
-            topSeperatorLine.heightAnchor.constraint(equalToConstant: 1),
+//            topSeperatorLine.leftAnchor.constraint(equalTo: bottomTimeLabel.rightAnchor, constant: 8),
+//            topSeperatorLine.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
+//            topSeperatorLine.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
+//            topSeperatorLine.heightAnchor.constraint(equalToConstant: 1),
             ])
     }
     
@@ -84,7 +91,7 @@ class CalendarTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func removeTopSeperatorLine() {
         self.topSeperatorLine.isHidden = true
     }
