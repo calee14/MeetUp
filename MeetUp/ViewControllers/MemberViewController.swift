@@ -43,6 +43,16 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let color=UIColor(rgb: 0xE5265A)
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.barTintColor = color
+        //self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.strokeColor: UIColor.white]//UIColor.white//[NSForegroundColorAttributeName: UIColor.orange]
+        self.navigationController?.navigationBar.tintColor=UIColor.white
+//        self.navigationController?.navigationItem.
+//        self.navigationController?.navigationBar.tintColor = UIColor.gray
+//        navigationController?.navigationItem.leftBarButtonItem?.tintColor = UIColor(rgb: 0xFEFEFE)
+//        navigationController?.navigationItem.rightBarButtonItem?.tintColor = UIColor(rgb: 0xFEFEFE)
         self.peopleLabel.layer.cornerRadius=8
         self.picker.delegate = self
         self.picker.dataSource = self
@@ -62,7 +72,6 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             print("something went wrong")
         }
     }
-    
 }
 
 
@@ -76,4 +85,5 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
 }
+
 

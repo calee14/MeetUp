@@ -17,14 +17,15 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var pmTableView: UITableView!
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var transparentView: UIView!
     
+    @IBOutlet weak var nameTextField: UITextField!
     var AMSelectedCells = [Int: Bool]()
     var PMSelectedCells = [Int: Bool]()
     var touchSide: Side!
     var initialTouch: CGPoint!
     var initialCellIsTouched: Bool!
+    let blackCellColor = UIColor(rgb: 0x222222)
     
 //    var numOfMembers: Int! = 3
 //    var duration: Int!
@@ -39,7 +40,8 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 //        print(CalendarViewController.testFromDatePage.NewDate)
-        dateLabel.text = CalendarViewController.testFromDatePage.NewDate
+//        dateLabel.text = CalendarViewController.testFromDatePage.NewDate
+        
         for i in 0...12 {
             AMSelectedCells[i] = false
             PMSelectedCells[i] = false
@@ -51,6 +53,8 @@ class CalendarViewController: UIViewController {
         pmTableView.isScrollEnabled = false
         amTableView.register(CalendarTableViewCell.self, forCellReuseIdentifier: "AMCalendarCell")
         pmTableView.register(CalendarTableViewCell.self, forCellReuseIdentifier: "PMCalendarCell")
+        amTableView.backgroundColor = blackCellColor
+        pmTableView.backgroundColor = blackCellColor
     }
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
         CalendarViewController.currentNumOfMembers += 1
@@ -207,38 +211,49 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = CalendarTableViewCell()
+        let cellColor = UIColor(rgb: 0x00B217)
+        var newBlack=UIColor(rgb: 0x222222)
         if tableView == amTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: "AMCalendarCell", for: indexPath) as! CalendarTableViewCell
+            
             if let throwaway = AMSelectedCells[indexPath.row - 1], throwaway == true {
-                cell.backgroundColor = .green
+                cell.backgroundColor = cellColor
             }
             else {
-                cell.backgroundColor = .clear
+                cell.backgroundColor = newBlack
             }
         } else if tableView == pmTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: "PMCalendarCell", for: indexPath) as! CalendarTableViewCell
             if let throwaway = PMSelectedCells[indexPath.row - 1], throwaway == true {
-                cell.backgroundColor = .green
+                cell.backgroundColor = cellColor
             }
             else {
-                cell.backgroundColor = .clear
+                cell.backgroundColor = newBlack
             }
         }
+        var timesuffix = ""
+        if tableView == amTableView {
+            timesuffix = "AM"
+        } else {
+            timesuffix = "PM"
+        }
         if indexPath.row >= 0 {
+            
             if indexPath.row == 0 {
                 cell.topTime = ""
-                cell.bottomTime = "12:00"
+                cell.bottomTime = "12:00\(timesuffix)"
                 cell.removeTopSeperatorLine()
                 return cell
             } else if indexPath.row == 1 {
-                cell.topTime = "12:00"
+                cell.topTime = "12:00\(timesuffix)"
             } else {
-                cell.topTime = "\(indexPath.row - 1):00"
+                cell.topTime = "\(indexPath.row - 1):00\(timesuffix)"
             }
         } else {
             cell.topTime = ""
         }
-        cell.bottomTime = "\(indexPath.row ):00"
+        cell.bottomTime = "\(indexPath.row ):00\(timesuffix)"
+        cell.changeBackground()
         return cell
     }
     
