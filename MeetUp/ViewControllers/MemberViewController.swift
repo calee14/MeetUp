@@ -43,6 +43,7 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.peopleLabel.layer.cornerRadius=8
         self.picker.delegate = self
         self.picker.dataSource = self
         pickerData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
@@ -63,3 +64,16 @@ class MemberViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
 }
+
+
+@IBDesignable extension UIPickerView {
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+}
+

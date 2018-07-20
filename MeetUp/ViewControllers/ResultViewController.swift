@@ -18,6 +18,9 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.resetButton.layer.cornerRadius=8
+        self.dataLabel.layer.cornerRadius=8
+        self.timeLabel.layer.cornerRadius=8
         dataLabel.text = "Date: \(CalendarViewController.testFromDatePage.NewDate!)"
         timeLabel.text = "Time: \(CalculateTime.calculate())"
         
