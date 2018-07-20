@@ -397,7 +397,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+<<<<<<< HEAD
 				DEVELOPMENT_TEAM = T56S9WBY9X;
+=======
+				DEVELOPMENT_TEAM = 6E9XW5U7WR;
+>>>>>>> parent of e85df63... Added username feature
 				INFOPLIST_FILE = MeetUp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (

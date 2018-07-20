@@ -18,11 +18,8 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var transparentView: UIView!
+    
     @IBOutlet weak var nameTextField: UITextField!
-    
-    
-    //Calls this function when the tap is recognized.
-    
     var AMSelectedCells = [Int: Bool]()
     var PMSelectedCells = [Int: Bool]()
     var touchSide: Side!
@@ -41,11 +38,6 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        
-        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
-        //tap.cancelsTouchesInView = false
-        
         // Do any additional setup after loading the view.
 //        print(CalendarViewController.testFromDatePage.NewDate)
 //        dateLabel.text = CalendarViewController.testFromDatePage.NewDate
@@ -64,7 +56,6 @@ class CalendarViewController: UIViewController {
         amTableView.backgroundColor = blackCellColor
         pmTableView.backgroundColor = blackCellColor
     }
-    
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
         CalendarViewController.currentNumOfMembers += 1
         UIViewController.userTimeData.append([AMSelectedCells, PMSelectedCells])
@@ -78,17 +69,12 @@ class CalendarViewController: UIViewController {
             let nextCalendar = storyboard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
             self.navigationController?.pushViewController(nextCalendar, animated: true)
         }
-        
-        let userName = nameTextField.text != "" ? nameTextField.text : "User Name \(UIViewController.userNames.count + 1)"
-        UIViewController.userNames.append(userName!)
-        print(UIViewController.userNames)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
         CalendarViewController.currentNumOfMembers -= 1
         if !UIViewController.userTimeData.isEmpty {
             UIViewController.userTimeData.removeLast()
-            UIViewController.userNames.removeLast()
         }
         print(UIViewController.userTimeData)
         self.navigationController?.popViewController(animated: true)
@@ -267,6 +253,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
             cell.topTime = ""
         }
         cell.bottomTime = "\(indexPath.row ):00\(timesuffix)"
+        cell.changeBackground()
         return cell
     }
     
@@ -290,4 +277,3 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.reloadData()
     }
 }
-

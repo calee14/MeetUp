@@ -44,6 +44,9 @@
                                                         <constraint firstItem="U8X-ga-pr5" firstAttribute="leading" secondItem="6zO-fC-7Li" secondAttribute="leading" constant="50" id="uoJ-7X-R64"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="amCalendarBackground" destination="U8X-ga-pr5" id="17z-lk-fSx"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
@@ -63,7 +66,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="177" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view tag="21" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfg-JO-Q3m">
+                                                        <view tag="1000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfg-JO-Q3m">
                                                             <rect key="frame" x="50" y="0.0" width="127" height="43.5"/>
                                                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
@@ -75,6 +78,9 @@
                                                         <constraint firstItem="Kfg-JO-Q3m" firstAttribute="leading" secondItem="AR5-OF-fuc" secondAttribute="leading" constant="50" id="igf-xe-1qJ"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="pmCalendarBackground" destination="Kfg-JO-Q3m" id="k75-uH-4H8"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <sections/>
