@@ -14,7 +14,11 @@ class AMDetailedResultTableViewCell: UITableViewCell {
     @IBOutlet weak var AMNumberLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        let backColor=UIColor(rgb: 0x1A1A1A)
+        self.backgroundColor=backColor
         // Initialization code
+        
+        self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
