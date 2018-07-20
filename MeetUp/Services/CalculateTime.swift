@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 struct CalculateTime {
-    static func calculate() -> String {
-        
+    
+    static func preprocessing() -> [Int: Int] {
         let pickedDuration = CalendarViewController.testFromDatePage.NewTime!
         let pickedNumberOfPeople = CalendarViewController.testFromDatePage.NewMember!
         let superDict: [[Int: Bool]] = CalculateTime.changeTimeDataType()
@@ -29,9 +29,16 @@ struct CalculateTime {
                 }
             }
         }
+        return availableTimesCount
+    }
+    
+    
+    static func calculate() -> String {
+        let pickedDuration = CalendarViewController.testFromDatePage.NewTime!
+        let pickedNumberOfPeople = CalendarViewController.testFromDatePage.NewMember!
+        let superDict: [[Int: Bool]] = CalculateTime.changeTimeDataType()
         
-        print("Starting times: \(availableTimesCount)")
-        //Compares all starting values and finds a common one
+        let availableTimesCount = CalculateTime.preprocessing()
         
         var startingTimesTotalCount = [Int: Int]()
         var finalAnswer = [Int]()
