@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4281656F2102547000ADCC9D /* DetailedResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281656E2102547000ADCC9D /* DetailedResultViewController.swift */; };
+		42816573210257C000ADCC9D /* PMDetailedResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42816572210257C000ADCC9D /* PMDetailedResultTableViewCell.swift */; };
+		4281657521025C0E00ADCC9D /* AMDetailedResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4281657421025C0E00ADCC9D /* AMDetailedResultTableViewCell.swift */; };
 		79330ED120FD38A600D72B2A /* DurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330ED020FD38A600D72B2A /* DurationViewController.swift */; };
 		79330ED320FD659000D72B2A /* TestingStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330ED220FD659000D72B2A /* TestingStuff.swift */; };
 		794EB10F20FE548D00719A77 /* Testboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794EB10E20FE548D00719A77 /* Testboard.storyboard */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4281656E2102547000ADCC9D /* DetailedResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedResultViewController.swift; sourceTree = "<group>"; };
+		42816572210257C000ADCC9D /* PMDetailedResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMDetailedResultTableViewCell.swift; sourceTree = "<group>"; };
+		4281657421025C0E00ADCC9D /* AMDetailedResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMDetailedResultTableViewCell.swift; sourceTree = "<group>"; };
 		79330ED020FD38A600D72B2A /* DurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationViewController.swift; sourceTree = "<group>"; };
 		79330ED220FD659000D72B2A /* TestingStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingStuff.swift; sourceTree = "<group>"; };
 		794EB10E20FE548D00719A77 /* Testboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testboard.storyboard; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 				B315B9B920FD465C00848B1B /* CalendarTableViewCell.swift */,
 				B315B9C520FEA96000848B1B /* MemberViewController.swift */,
 				798F734920FEB0AB00253443 /* DateViewController.swift */,
+				4281656E2102547000ADCC9D /* DetailedResultViewController.swift */,
+				42816572210257C000ADCC9D /* PMDetailedResultTableViewCell.swift */,
+				4281657421025C0E00ADCC9D /* AMDetailedResultTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,13 +230,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				79330ED320FD659000D72B2A /* TestingStuff.swift in Sources */,
+				42816573210257C000ADCC9D /* PMDetailedResultTableViewCell.swift in Sources */,
 				794EB11120FE552C00719A77 /* Helper.swift in Sources */,
 				B315B9C620FEA96000848B1B /* MemberViewController.swift in Sources */,
+				4281656F2102547000ADCC9D /* DetailedResultViewController.swift in Sources */,
 				B315B9B620FD346700848B1B /* CalendarViewController.swift in Sources */,
 				B315B9BA20FD465C00848B1B /* CalendarTableViewCell.swift in Sources */,
 				B315B9C020FE67E700848B1B /* UIViewController+Extentions.swift in Sources */,
 				79A606A7210141DD00C30306 /* TutorialViewController.swift in Sources */,
 				B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */,
+				4281657521025C0E00ADCC9D /* AMDetailedResultTableViewCell.swift in Sources */,
 				B315B9CB20FFAFB300848B1B /* CalculateTime.swift in Sources */,
 				B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */,
 				79330ED120FD38A600D72B2A /* DurationViewController.swift in Sources */,
@@ -377,8 +389,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6E9XW5U7WR;
+				DEVELOPMENT_TEAM = T56S9WBY9X;
 				INFOPLIST_FILE = MeetUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,8 +408,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6E9XW5U7WR;
+				DEVELOPMENT_TEAM = T56S9WBY9X;
 				INFOPLIST_FILE = MeetUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
