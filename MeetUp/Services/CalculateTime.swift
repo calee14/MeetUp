@@ -15,7 +15,7 @@ struct CalculateTime {
         let dict = CalculateTime.changeTimeDataType()
         var canMakeIt = ""
         var cantMakeIt = ""
-        for i in 0...CalendarViewController.testFromDatePage.NewMember! {
+        for i in 0...CalendarViewController.testFromDatePage.NewMember!-1 {
             if dict[i][time]! {
                 canMakeIt = canMakeIt + names[i] + "\n"
             }

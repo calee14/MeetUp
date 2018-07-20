@@ -82,20 +82,32 @@ extension DetailedResultViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            return
-        }
+        
+        //comment this out later
+        let names = ["Audrey", "Cap", "Pei", "Joshua", "e", "f", "g", "h", "i", "j"]
+        
+        //
         if tableView == AMTableView {
             let popOver = UIStoryboard(name: "Result", bundle: nil).instantiateViewController(withIdentifier: "WhoCanMakeIt") as! WhoCanMakeItViewController
             self.addChildViewController(popOver)
             popOver.view.frame = self.view.frame
             self.view.addSubview(popOver.view)
+            let (canMakeIt, cantMakeIt) = CalculateTime.findNames(time: indexPath.row, names: names)
+            print(canMakeIt)
+            print(cantMakeIt)
+            popOver.canMakeNamesLabel.text = canMakeIt
+            popOver.cannotMakeNamesLabel.text = cantMakeIt
             popOver.didMove(toParentViewController: self)
         } else if tableView == PMTableView {
             let popOver = UIStoryboard(name: "Result", bundle: nil).instantiateViewController(withIdentifier: "WhoCanMakeIt") as! WhoCanMakeItViewController
             self.addChildViewController(popOver)
             popOver.view.frame = self.view.frame
             self.view.addSubview(popOver.view)
+            let (canMakeIt, cantMakeIt) = CalculateTime.findNames(time: indexPath.row + 12, names: names)
+            print(canMakeIt)
+            print(cantMakeIt)
+            popOver.canMakeNamesLabel.text = canMakeIt
+            popOver.cannotMakeNamesLabel.text = cantMakeIt
             popOver.didMove(toParentViewController: self)
         }
     }
