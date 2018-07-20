@@ -15,8 +15,6 @@ class CalendarTableViewCell: UITableViewCell {
     
     private let separatorLine = UIView()
     private let topSeperatorLine = UIView()
-    @IBOutlet weak var amCalendarBackground: UIView!
-    @IBOutlet weak var pmCalendarBackground: UIView!
     
     var topTime: String = "" {
         didSet {
@@ -93,13 +91,7 @@ class CalendarTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func changeBackground() {
-        print("hi asdlkfja")
-        let textWidth = self.separatorLine.frame.size.width
-        print(textWidth)
-        print(self.frame.size.width)
-        
-    }
+
     func removeTopSeperatorLine() {
         self.topSeperatorLine.isHidden = true
     }
