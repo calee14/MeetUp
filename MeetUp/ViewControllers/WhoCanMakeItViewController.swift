@@ -17,7 +17,6 @@ class WhoCanMakeItViewController: UIViewController {
     
     @IBOutlet weak var cannotMakeNamesLabel: UILabel!
     
-    @IBOutlet weak var closeButton: UIButton!
     @IBAction func closePopupButton(_ sender: UIButton) {
         self.removeAnimate()
         self.view.removeFromSuperview()
@@ -28,7 +27,6 @@ class WhoCanMakeItViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.closeButton.layer.cornerRadius=8
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
         self.showAnimate()
     }

@@ -83,7 +83,10 @@ extension DetailedResultViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let names = UIViewController.userNames
+        //comment this out later
+        let names = ["Audrey", "Cap", "Pei", "Joshua", "e", "f", "g", "h", "i", "j"]
+        
+        //
         if tableView == AMTableView {
             let popOver = UIStoryboard(name: "Result", bundle: nil).instantiateViewController(withIdentifier: "WhoCanMakeIt") as! WhoCanMakeItViewController
             self.addChildViewController(popOver)

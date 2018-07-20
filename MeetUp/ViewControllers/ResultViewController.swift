@@ -16,11 +16,8 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    @IBOutlet weak var moreButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.moreButton.layer.cornerRadius=8
         self.resetButton.layer.cornerRadius=8
         self.dataLabel.layer.cornerRadius=8
         self.timeLabel.layer.cornerRadius=8
@@ -30,7 +27,6 @@ class ResultViewController: UIViewController {
     }
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         UIViewController.userTimeData = [[[Int : Bool]]]()
-        UIViewController.userNames = [String]()
 //        if let nvc = navigationController {
 //            nvc.popViewController(animated: true)
 //        } else {
