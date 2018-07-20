@@ -11,6 +11,21 @@ import UIKit
 
 struct CalculateTime {
     
+    static func findNames(time: Int, names: [String]) -> (canMakeIt: String, cantMakeIt: String) {
+        let dict = CalculateTime.changeTimeDataType()
+        var canMakeIt = ""
+        var cantMakeIt = ""
+        for i in 0...CalendarViewController.testFromDatePage.NewMember! {
+            if dict[i][time]! {
+                canMakeIt = canMakeIt + names[i] + "\n"
+            }
+            else {
+                cantMakeIt = cantMakeIt + names[i] + "\n"
+            }
+        }
+        return (canMakeIt, cantMakeIt)
+    }
+    
     static func preprocessing() -> [Int: Int] {
         let pickedDuration = CalendarViewController.testFromDatePage.NewTime!
         let pickedNumberOfPeople = CalendarViewController.testFromDatePage.NewMember!
