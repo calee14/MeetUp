@@ -15,6 +15,7 @@ class DurationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Dispose of any resources that can be recreated.
     }
     
+    
     @IBOutlet weak var howLongLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     
@@ -43,6 +44,8 @@ class DurationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.howLongLabel.layer.cornerRadius=8
+        self.hoursLabel.layer.cornerRadius=8
         self.eventTime.delegate = self
         self.eventTime.dataSource = self
         eventPickerData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
@@ -64,6 +67,18 @@ class DurationViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+}
+
+
+@IBDesignable extension UIPickerView {
+    @IBInspectable var durationCornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
 }
 
 

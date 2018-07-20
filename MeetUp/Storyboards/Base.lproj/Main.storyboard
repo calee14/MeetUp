@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k7s-Ze-s96">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,26 +15,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SetupViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="vGI-M7-LfA">
-                                <rect key="frame" x="29.666666666666657" y="148" width="316" height="376"/>
+                                <rect key="frame" x="20" y="177.5" width="335" height="376.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meetly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNH-Jh-qhb">
-                                        <rect key="frame" x="64.333333333333329" y="0.0" width="187.66666666666669" height="65.666666666666671"/>
+                                        <rect key="frame" x="73.5" y="0.0" width="188" height="66"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="55"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group members select their available hours on a pre-chosen meeting date. App calculates possible meeting times!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-KU-sdG">
-                                        <rect key="frame" x="13.666666666666657" y="105.66666666666666" width="288.66666666666674" height="109.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="106" width="335" height="109.5"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                         <color key="textColor" red="0.87183913678128666" green="0.86762735351181186" blue="0.87605092005076146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hje-eL-9ZQ">
-                                        <rect key="frame" x="84" y="255" width="148" height="40"/>
+                                        <rect key="frame" x="93.5" y="255.5" width="148" height="40"/>
                                         <color key="backgroundColor" red="0.49803921568627452" green="0.082352941176470587" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                         <state key="normal" title="   User Tutorial   ">
@@ -50,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-ZI-Y1V">
-                                        <rect key="frame" x="0.0" y="335" width="316" height="41"/>
+                                        <rect key="frame" x="9.5" y="335.5" width="316" height="41"/>
                                         <color key="backgroundColor" red="1" green="0.16470588235294117" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
                                         <state key="normal" title="   Click to set up new meeting   ">
@@ -71,9 +71,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.042406342095798917" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vGI-M7-LfA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="4CC-m3-OXr"/>
-                            <constraint firstAttribute="trailing" secondItem="vGI-M7-LfA" secondAttribute="trailing" constant="30" id="cLO-Yr-kQO"/>
-                            <constraint firstItem="vGI-M7-LfA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="lDC-Cm-hxM"/>
+                            <constraint firstAttribute="trailing" secondItem="vGI-M7-LfA" secondAttribute="trailing" constant="20" id="9uG-wU-SAz"/>
+                            <constraint firstItem="vGI-M7-LfA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F9O-se-zXL"/>
+                            <constraint firstItem="vGI-M7-LfA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="G6P-Wj-gyy"/>
+                            <constraint firstItem="vGI-M7-LfA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GDW-bh-JW6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -91,11 +92,11 @@
             <objects>
                 <viewController id="D3N-r5-AL0" customClass="TutorialViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K2q-c7-E29">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64e-ec-hVi">
-                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Set up meeting logistics (Number of people, duration, and date)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQO-20-6c8">
                                         <rect key="frame" x="20" y="20" width="295" height="90"/>
@@ -109,7 +110,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorialpage1" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-Bu-81a">
-                                        <rect key="frame" x="10" y="120" width="315" height="520"/>
+                                        <rect key="frame" x="10" y="120" width="315" height="433"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -156,42 +157,37 @@
             <objects>
                 <viewController id="6Fl-9x-QqF" customClass="MemberViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xrw-1R-ozU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8eX-JH-NM7">
-                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TTD-Fm-mEI">
+                                <rect key="frame" x="30" y="201.5" width="315" height="328"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TTD-Fm-mEI">
-                                        <rect key="frame" x="10" y="30" width="315" height="590"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people are joining this meeting?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXu-2V-Bfg">
-                                                <rect key="frame" x="18" y="0.0" width="279.33333333333331" height="290"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                                <color key="textColor" red="0.15294117647058825" green="0.63921568627450975" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9w-jd-eXW">
-                                                <rect key="frame" x="0.0" y="300" width="315" height="290"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath1" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </pickerView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="dXu-2V-Bfg" firstAttribute="height" secondItem="C9w-jd-eXW" secondAttribute="height" id="O6P-sw-3HS"/>
-                                        </constraints>
-                                    </stackView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many people are joining this meeting?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXu-2V-Bfg">
+                                        <rect key="frame" x="4" y="0.0" width="307" height="82"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.14901960784313725" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9w-jd-eXW">
+                                        <rect key="frame" x="0.0" y="112" width="315" height="216"/>
+                                        <color key="backgroundColor" white="0.90261501736111116" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath1" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="TTD-Fm-mEI" secondAttribute="trailing" constant="10" id="0Cc-xq-CBq"/>
-                                    <constraint firstItem="TTD-Fm-mEI" firstAttribute="top" secondItem="8eX-JH-NM7" secondAttribute="top" constant="30" id="EqC-QG-fKA"/>
-                                    <constraint firstItem="TTD-Fm-mEI" firstAttribute="leading" secondItem="8eX-JH-NM7" secondAttribute="leading" constant="10" id="J5n-aD-ZLM"/>
-                                    <constraint firstAttribute="bottom" secondItem="TTD-Fm-mEI" secondAttribute="bottom" constant="30" id="uq7-Mh-WjZ"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aK9-K9-AsC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -200,12 +196,12 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.23529411764705882" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.040000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="S6n-Lg-77z" firstAttribute="trailing" secondItem="8eX-JH-NM7" secondAttribute="trailing" constant="20" id="IZh-EJ-TVl"/>
-                            <constraint firstItem="S6n-Lg-77z" firstAttribute="bottom" secondItem="8eX-JH-NM7" secondAttribute="bottom" constant="20" id="YmJ-xP-ECI"/>
-                            <constraint firstItem="8eX-JH-NM7" firstAttribute="leading" secondItem="S6n-Lg-77z" secondAttribute="leading" constant="20" id="nHf-qs-a8x"/>
-                            <constraint firstItem="8eX-JH-NM7" firstAttribute="top" secondItem="S6n-Lg-77z" secondAttribute="top" constant="20" id="oGy-rF-n5r"/>
+                            <constraint firstItem="TTD-Fm-mEI" firstAttribute="centerY" secondItem="S6n-Lg-77z" secondAttribute="centerY" id="0pU-gR-fJl"/>
+                            <constraint firstAttribute="trailing" secondItem="TTD-Fm-mEI" secondAttribute="trailing" constant="30" id="O5m-iS-1nY"/>
+                            <constraint firstItem="TTD-Fm-mEI" firstAttribute="leading" secondItem="S6n-Lg-77z" secondAttribute="leading" constant="30" id="czl-Yc-Nsg"/>
+                            <constraint firstItem="TTD-Fm-mEI" firstAttribute="centerX" secondItem="S6n-Lg-77z" secondAttribute="centerX" id="qPN-kJ-vMK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S6n-Lg-77z"/>
                     </view>
@@ -230,63 +226,68 @@
             <objects>
                 <viewController id="aMa-rj-9VM" customClass="DurationViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p13-Bw-oRy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d61-94-CEq">
-                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-3X-lUx">
+                                <rect key="frame" x="20" y="234.5" width="335" height="262"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-3X-lUx">
-                                        <rect key="frame" x="10" y="20" width="315" height="610"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long is the meeting going to last?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-D1-qz8">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="82"/>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.14901960780000001" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hqF-kI-KEs">
+                                        <rect key="frame" x="0.0" y="112" width="335" height="150"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long is the meeting going to last?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-D1-qz8">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="300"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                                <color key="textColor" red="0.1529411765" green="0.63921568630000003" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63o-yA-Zkk">
+                                                <rect key="frame" x="0.0" y="0.0" width="245" height="150"/>
+                                                <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="5iM-Cq-nL7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath1" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </pickerView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-ej-Dlm">
+                                                <rect key="frame" x="255" y="61.5" width="80" height="27.5"/>
+                                                <color key="backgroundColor" red="0.49803921569999998" green="0.08235294118" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="RFL-ee-roE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hqF-kI-KEs">
-                                                <rect key="frame" x="0.0" y="310" width="315" height="300"/>
-                                                <subviews>
-                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63o-yA-Zkk">
-                                                        <rect key="frame" x="0.0" y="75" width="225" height="150"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="150" id="5iM-Cq-nL7"/>
-                                                        </constraints>
-                                                    </pickerView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZu-ej-Dlm">
-                                                        <rect key="frame" x="235" y="140" width="80" height="20.333333333333343"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="RFL-ee-roE"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Qkl-D1-qz8" firstAttribute="height" secondItem="hqF-kI-KEs" secondAttribute="height" id="88Y-je-uKj"/>
-                                        </constraints>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="UJe-3X-lUx" secondAttribute="bottom" constant="20" id="ERA-5W-qq6"/>
-                                    <constraint firstItem="UJe-3X-lUx" firstAttribute="top" secondItem="d61-94-CEq" secondAttribute="top" constant="20" id="dmd-wf-mIL"/>
-                                    <constraint firstItem="UJe-3X-lUx" firstAttribute="leading" secondItem="d61-94-CEq" secondAttribute="leading" constant="10" id="jMh-Nb-d79"/>
-                                    <constraint firstAttribute="trailing" secondItem="UJe-3X-lUx" secondAttribute="trailing" constant="10" id="x6G-WD-Ma2"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.23529411764705882" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.040000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d61-94-CEq" firstAttribute="leading" secondItem="Wc3-UT-GIv" secondAttribute="leading" constant="20" id="juB-ld-3MG"/>
-                            <constraint firstItem="Wc3-UT-GIv" firstAttribute="trailing" secondItem="d61-94-CEq" secondAttribute="trailing" constant="20" id="piC-Ye-4Oz"/>
-                            <constraint firstItem="d61-94-CEq" firstAttribute="top" secondItem="Wc3-UT-GIv" secondAttribute="top" constant="20" id="puY-58-ILg"/>
-                            <constraint firstItem="Wc3-UT-GIv" firstAttribute="bottom" secondItem="d61-94-CEq" secondAttribute="bottom" constant="20" id="znB-uU-m5i"/>
+                            <constraint firstItem="UJe-3X-lUx" firstAttribute="centerX" secondItem="Wc3-UT-GIv" secondAttribute="centerX" id="GyP-8X-uZV"/>
+                            <constraint firstAttribute="trailing" secondItem="UJe-3X-lUx" secondAttribute="trailing" constant="20" id="byb-zP-m2Q"/>
+                            <constraint firstItem="UJe-3X-lUx" firstAttribute="leading" secondItem="p13-Bw-oRy" secondAttribute="leading" constant="20" id="hp9-7C-NK9"/>
+                            <constraint firstItem="UJe-3X-lUx" firstAttribute="centerY" secondItem="Wc3-UT-GIv" secondAttribute="centerY" id="pNp-sf-Uy9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wc3-UT-GIv"/>
                     </view>
@@ -301,7 +302,7 @@
                     <connections>
                         <outlet property="eventTime" destination="63o-yA-Zkk" id="rXY-S5-T2F"/>
                         <outlet property="hoursLabel" destination="DZu-ej-Dlm" id="Vfw-ZL-f13"/>
-                        <outlet property="howLongLabel" destination="Qkl-D1-qz8" id="OQT-cr-gu0"/>
+                        <outlet property="howLongLabel" destination="Qkl-D1-qz8" id="ZZy-z6-VqN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97f-gO-beD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,23 +322,28 @@
             <objects>
                 <viewController id="t1v-lb-1ig" customClass="DateViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ba-VV-s4b">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlF-8t-qhn">
-                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-wt-Flu">
+                                <rect key="frame" x="20" y="199.5" width="335" height="332"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-wt-Flu">
-                                        <rect key="frame" x="20" y="20" width="295" height="610"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On what date do you want to meet up?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-EL-Shc">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="82"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.14901960784313725" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmd-gd-g85">
+                                        <rect key="frame" x="0.0" y="112" width="335" height="220"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On what date do you want to meet up?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1QN-EL-Shc">
-                                                <rect key="frame" x="0.0" y="0.0" width="295" height="300"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                                <color key="textColor" red="0.1529411765" green="0.63921568630000003" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9K3-9k-wkj">
-                                                <rect key="frame" x="0.0" y="310" width="295" height="300"/>
+                                            <datePicker clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9K3-9k-wkj">
+                                                <rect key="frame" x="20" y="10" width="295" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="QBC-YN-JWl"/>
+                                                </constraints>
                                                 <date key="date" timeIntervalSinceReferenceDate="553559969.24023604">
                                                     <!--2018-07-17 22:39:29 +0000-->
                                                 </date>
@@ -346,26 +352,24 @@
                                                 </connections>
                                             </datePicker>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="1QN-EL-Shc" firstAttribute="height" secondItem="9K3-9k-wkj" secondAttribute="height" id="Ps2-Z6-lYq"/>
+                                            <constraint firstAttribute="trailing" secondItem="9K3-9k-wkj" secondAttribute="trailing" constant="20" id="ISU-Pq-6LB"/>
+                                            <constraint firstItem="9K3-9k-wkj" firstAttribute="leading" secondItem="lmd-gd-g85" secondAttribute="leading" constant="20" id="KmI-Wn-L3A"/>
+                                            <constraint firstAttribute="height" constant="220" id="XRL-Ne-PPy"/>
+                                            <constraint firstItem="9K3-9k-wkj" firstAttribute="centerY" secondItem="lmd-gd-g85" secondAttribute="centerY" id="YLT-gN-eCz"/>
+                                            <constraint firstItem="9K3-9k-wkj" firstAttribute="centerX" secondItem="lmd-gd-g85" secondAttribute="centerX" id="lra-CH-yOV"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="qrh-wt-Flu" firstAttribute="top" secondItem="WlF-8t-qhn" secondAttribute="top" constant="20" id="Boh-QE-AlA"/>
-                                    <constraint firstAttribute="trailing" secondItem="qrh-wt-Flu" secondAttribute="trailing" constant="20" id="CRE-RO-DwQ"/>
-                                    <constraint firstItem="qrh-wt-Flu" firstAttribute="leading" secondItem="WlF-8t-qhn" secondAttribute="leading" constant="20" id="QHT-ig-7Us"/>
-                                    <constraint firstAttribute="bottom" secondItem="qrh-wt-Flu" secondAttribute="bottom" constant="20" id="n0l-qV-fdl"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.23529411764705882" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.040000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bL2-UI-AQL" firstAttribute="trailing" secondItem="WlF-8t-qhn" secondAttribute="trailing" constant="20" id="8pP-T5-sLE"/>
-                            <constraint firstItem="bL2-UI-AQL" firstAttribute="bottom" secondItem="WlF-8t-qhn" secondAttribute="bottom" constant="20" id="DaO-Ma-H3m"/>
-                            <constraint firstItem="WlF-8t-qhn" firstAttribute="top" secondItem="bL2-UI-AQL" secondAttribute="top" constant="20" id="cw6-GJ-STd"/>
-                            <constraint firstItem="WlF-8t-qhn" firstAttribute="leading" secondItem="bL2-UI-AQL" secondAttribute="leading" constant="20" id="oBO-Wz-R34"/>
+                            <constraint firstItem="qrh-wt-Flu" firstAttribute="leading" secondItem="bL2-UI-AQL" secondAttribute="leading" constant="20" id="8TT-Re-5zg"/>
+                            <constraint firstAttribute="trailing" secondItem="qrh-wt-Flu" secondAttribute="trailing" constant="20" id="Kcg-gZ-Wkp"/>
+                            <constraint firstItem="qrh-wt-Flu" firstAttribute="centerX" secondItem="bL2-UI-AQL" secondAttribute="centerX" id="Wg3-wz-isc"/>
+                            <constraint firstItem="qrh-wt-Flu" firstAttribute="centerY" secondItem="bL2-UI-AQL" secondAttribute="centerY" id="kvv-5R-MFy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bL2-UI-AQL"/>
                     </view>
@@ -377,7 +381,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateLabel" destination="1QN-EL-Shc" id="olW-1r-dcx"/>
                         <outlet property="datePicker" destination="9K3-9k-wkj" id="y0q-ld-0Iu"/>
+                        <outlet property="roundedView" destination="lmd-gd-g85" id="CbM-yb-kra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7KV-w5-Nh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -390,7 +396,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k7s-Ze-s96" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R7y-Gv-pwZ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -408,7 +414,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nxU-dL-MtI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3h0-0o-BmR">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -425,11 +431,11 @@
             <objects>
                 <viewController id="qBi-rG-bca" customClass="TutorialViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lZF-bE-C5k">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVA-gV-7Os">
-                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Two: Each group member selects their available hours on the pre-chosen meeting date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbK-VW-Ejm">
                                         <rect key="frame" x="20" y="20" width="295" height="72"/>
@@ -441,7 +447,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeselection" translatesAutoresizingMaskIntoConstraints="NO" id="pQj-tO-zjD">
-                                        <rect key="frame" x="20" y="112" width="295" height="518"/>
+                                        <rect key="frame" x="20" y="112" width="295" height="431"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -485,11 +491,11 @@
             <objects>
                 <viewController id="MUz-kg-8AH" customClass="TutorialViewController" customModule="MeetUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zgQ-Ox-8pq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nj-vk-swN">
-                                <rect key="frame" x="20" y="108" width="335" height="650"/>
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Three: View available meeting times!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21B-Dy-X2E">
                                         <rect key="frame" x="20" y="20" width="295" height="48"/>
@@ -501,7 +507,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result-demo" translatesAutoresizingMaskIntoConstraints="NO" id="Uho-CS-EKM">
-                                        <rect key="frame" x="20" y="88" width="295" height="542"/>
+                                        <rect key="frame" x="20" y="88" width="295" height="455"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
