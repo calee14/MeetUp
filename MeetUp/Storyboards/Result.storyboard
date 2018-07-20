@@ -113,6 +113,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x3G-wX-Xbn" userLabel="AMTable">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="543"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AMDetailCell" id="E9Z-Z5-EQu" customClass="AMDetailedResultTableViewCell" customModule="MeetUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="187.5" height="44"/>
@@ -143,6 +144,7 @@
                                                         <constraint firstItem="E9e-zL-T8p" firstAttribute="top" secondItem="3hb-Td-szN" secondAttribute="top" id="bT7-uo-xCb"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="AMColorCell" destination="E9e-zL-T8p" id="RM7-no-G5K"/>
                                                     <outlet property="AMNumberLabel" destination="l3O-QW-FRx" id="wvZ-Fj-oKY"/>
@@ -158,6 +160,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lu4-4Y-X1K" userLabel="PMTable">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="543"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PMDetailCell" id="NSN-8i-8i1" customClass="PMDetailedResultTableViewCell" customModule="MeetUp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="187.5" height="44"/>
@@ -188,6 +191,7 @@
                                                         <constraint firstItem="YUm-cq-38x" firstAttribute="top" secondItem="V2i-HU-juL" secondAttribute="top" id="oqf-h9-3ay"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="PMColorCell" destination="YUm-cq-38x" id="1Yd-lK-dU0"/>
                                                     <outlet property="PMNumberLabel" destination="Czq-EC-zA2" id="zd2-gr-Etf"/>
