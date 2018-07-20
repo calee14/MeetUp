@@ -555,7 +555,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newtimeselection" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-gs-Qhn">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pinktimeselect" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-gs-Qhn">
                                         <rect key="frame" x="0.0" y="100" width="335" height="463"/>
                                     </imageView>
                                 </subviews>
@@ -611,7 +611,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result-demo" translatesAutoresizingMaskIntoConstraints="NO" id="m3h-lz-BrT">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="updatedresult" translatesAutoresizingMaskIntoConstraints="NO" id="m3h-lz-BrT">
                                         <rect key="frame" x="0.0" y="90" width="335" height="473"/>
                                     </imageView>
                                 </subviews>
@@ -665,9 +665,9 @@
     <resources>
         <image name="date" width="574" height="852"/>
         <image name="duration" width="576" height="884"/>
-        <image name="newtimeselection" width="1182" height="1058"/>
-        <image name="result-demo" width="574" height="848"/>
+        <image name="pinktimeselect" width="1178" height="1040"/>
         <image name="tutorialpage1" width="572" height="820"/>
+        <image name="updatedresult" width="584" height="902"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="j43-EL-ocG"/>
