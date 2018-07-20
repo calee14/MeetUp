@@ -9,11 +9,12 @@
 import UIKit
 
 class SetupViewController: UIViewController {
-
+    
     @IBOutlet weak var setUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -62,5 +63,7 @@ class SetupViewController: UIViewController {
         }
     }
 }
+
+
 
 
