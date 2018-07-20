@@ -14,6 +14,7 @@
 		79330ED320FD659000D72B2A /* TestingStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79330ED220FD659000D72B2A /* TestingStuff.swift */; };
 		794EB10F20FE548D00719A77 /* Testboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794EB10E20FE548D00719A77 /* Testboard.storyboard */; };
 		794EB11120FE552C00719A77 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794EB11020FE552B00719A77 /* Helper.swift */; };
+		7987FC8F2102683D00FD6561 /* WhoCanMakeItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7987FC8E2102683D00FD6561 /* WhoCanMakeItViewController.swift */; };
 		798F734420FE69DC00253443 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798F734320FE69DC00253443 /* Result.storyboard */; };
 		798F734620FE6A0800253443 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F734520FE6A0800253443 /* ResultViewController.swift */; };
 		798F734A20FEB0AB00253443 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798F734920FEB0AB00253443 /* DateViewController.swift */; };
@@ -39,6 +40,7 @@
 		79330ED220FD659000D72B2A /* TestingStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingStuff.swift; sourceTree = "<group>"; };
 		794EB10E20FE548D00719A77 /* Testboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testboard.storyboard; sourceTree = "<group>"; };
 		794EB11020FE552B00719A77 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		7987FC8E2102683D00FD6561 /* WhoCanMakeItViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoCanMakeItViewController.swift; sourceTree = "<group>"; };
 		798F734320FE69DC00253443 /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		798F734520FE6A0800253443 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		798F734920FEB0AB00253443 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				4281656E2102547000ADCC9D /* DetailedResultViewController.swift */,
 				42816572210257C000ADCC9D /* PMDetailedResultTableViewCell.swift */,
 				4281657421025C0E00ADCC9D /* AMDetailedResultTableViewCell.swift */,
+				7987FC8E2102683D00FD6561 /* WhoCanMakeItViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				B3F37B7820FD143100E323A4 /* AppDelegate.swift in Sources */,
 				4281657521025C0E00ADCC9D /* AMDetailedResultTableViewCell.swift in Sources */,
 				B315B9CB20FFAFB300848B1B /* CalculateTime.swift in Sources */,
+				7987FC8F2102683D00FD6561 /* WhoCanMakeItViewController.swift in Sources */,
 				B315B9BE20FE520A00848B1B /* SetupViewController.swift in Sources */,
 				79330ED120FD38A600D72B2A /* DurationViewController.swift in Sources */,
 				798F734620FE6A0800253443 /* ResultViewController.swift in Sources */,

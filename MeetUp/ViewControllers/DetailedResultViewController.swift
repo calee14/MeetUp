@@ -81,4 +81,23 @@ extension DetailedResultViewController: UITableViewDelegate, UITableViewDataSour
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            return
+        }
+        if tableView == AMTableView {
+            let popOver = UIStoryboard(name: "Result", bundle: nil).instantiateViewController(withIdentifier: "WhoCanMakeIt") as! WhoCanMakeItViewController
+            self.addChildViewController(popOver)
+            popOver.view.frame = self.view.frame
+            self.view.addSubview(popOver.view)
+            popOver.didMove(toParentViewController: self)
+        } else if tableView == PMTableView {
+            let popOver = UIStoryboard(name: "Result", bundle: nil).instantiateViewController(withIdentifier: "WhoCanMakeIt") as! WhoCanMakeItViewController
+            self.addChildViewController(popOver)
+            popOver.view.frame = self.view.frame
+            self.view.addSubview(popOver.view)
+            popOver.didMove(toParentViewController: self)
+        }
+    }
+    
 }
