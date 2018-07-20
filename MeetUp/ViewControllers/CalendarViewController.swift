@@ -225,7 +225,7 @@ extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = CalendarTableViewCell()
-        let cellColor = UIColor(rgb: 0x00B217)
+        let cellColor = UIColor(rgb: 0xFF2A64)
         var newBlack=UIColor(rgb: 0x222222)
         if tableView == amTableView {
             cell = tableView.dequeueReusableCell(withIdentifier: "AMCalendarCell", for: indexPath) as! CalendarTableViewCell
