@@ -34,7 +34,7 @@ class CalendarViewController: UIViewController {
 //    var duration: Int!
     //accepting values from Main storyboard
 //    static var testFromDatePage: TestClass?
-    static var testFromDatePage = TestClass.init(NewTime: 1, NewMember: 1)
+    static var testFromDatePage = TestClass.init(NewTime: 2, NewMember: 3)
     //    to call the variables passed from main storyboard: testFromDatePage.NewTime/NewMember/NewDate
     
     static var currentNumOfMembers = 0
